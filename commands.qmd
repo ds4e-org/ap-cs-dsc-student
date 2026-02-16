@@ -2,55 +2,934 @@
 title: Useful Python Commands
 ---
 
+```{python}
+#| label: setup
+#| include: false
+
+# Example objects used in the examples below
+exchange_rates = {
+    "EUR": 0.92,
+    "JPY": 148.5,
+    "GBP": 0.79
+}
+
+phase_changes = {
+    -1: "Below freezing",
+    0: "Freezing point of water",
+    100: "Boiling point of water"
+}
+
+letters = ["A", "B", "C", "D", "E"]
+```
+
 ## Notebook 1: Basic Python & Data Structures
 
 ### Variables and Assignment
 
 Python variables are created by assignment. A valid Python variable name must start with a letter or an underscore, use only letters, numbers, and underscores, and can't be a reserved Python keyword.
 
-**Example**
+**Syntax**
 
-```{python}
-#| label: py-variables
-course_name = "Data Science"
-pi = 3.14159
-_five = 5
-
-print(_five)
-print(pi)
-print(course_name)
+``` python
+variable_name = value
 ```
-
-### Numeric Operations
-
-Python supports standard arithmetic operations.
 
 **Example**
 
 ```{python}
-#| label: py-arithmetic
-print(_five + pi)
-print(_five * pi)
-print(_five / 2)
-print(_five ** 2)
+#| label: assignment-operator
+
+x = 10
+x
 ```
 
-### Lists
+### Data Structures
 
-Lists store ordered collections of values. They can contain elements of different data types such as numbers, strings, and booleans.
+#### Lists (`[ ]`)
+
+Lists store ordered collections of values. Items are accessed by index, starting at 0.
+
+**Syntax**
+
+``` python
+my_list = [item1, item2, item3]
+my_list[index]
+```
 
 **Example**
 
 ```{python}
-#| label: py-lists
-numbers = [1, 2, "3", 4, 5]
-mixed_list = [True, 2.0, 3, "four", 5.]
+#| label: list-index-example
 
-print(numbers)
-print(mixed_list)
+letters = ["A", "B", "C", "D", "E"]
+
+print(letters[0])
+print(letters[1])
+print(letters[2])
+print(letters[3])
+print(letters[4])
 ```
 
-### Notebook 2: Pandas and Basic Data Exploration
-### Notebook 3: Visualizing Distributions
-### Notebook 4: Visualizing Trends
-### Notebook 5: Exploring Relationships and Trends
+#### List Slices (`:`)
+
+Slices select a range of values from a list. The ending index is not included.
+
+**Syntax**
+
+``` python
+my_list[start:end]
+my_list[:end]
+my_list[start:]
+```
+
+**Example**
+
+```{python}
+#| label: list-first-index-example
+
+print(letters[0:3])
+print(letters[:3])
+```
+
+**Example**
+
+```{python}
+#| label: list-last-index-example
+
+print(letters[-3:])
+```
+
+::: {.callout-note title="Slice reminder"}
+- `[:3]` and `[:3]` both mean items at index positions 0–2
+- `[-3:]` means the last three items
+:::
+
+#### Dictionaries (`{ }`)
+
+Dictionaries store key–value pairs. Values are accessed using keys.
+
+**Syntax**
+
+```python
+my_dict = {key1: value1, key2: value2}
+my_dict[key1]
+my_dict[key2]
+```
+
+**Example (string keys)**
+
+```{python}
+#| label: dict-string-keys
+
+print(exchange_rates)
+print(exchange_rates["EUR"])
+print(exchange_rates["JPY"])
+print(exchange_rates["GBP"])
+```
+
+**Example (numeric keys)**
+
+```{python}
+#| label: dict-numeric-keys
+
+print(phase_changes)
+print(phase_changes[-1])
+print(phase_changes[0])
+print(phase_changes[100])
+```
+
+::: {.callout-note title="Lists vs Dictionaries"}
+- Use a list when order matters (index-based).
+- Use a dictionary when you need to look up values by a meaningful label (key-based).
+:::
+
+### Functions
+
+#### `print()`
+
+The `print()` function displays output.
+
+**Syntax**
+
+``` python
+print(value)
+```
+
+**Example**
+
+```{python}
+#| label: print-example
+
+print("Hello!")
+print(x)
+```
+
+#### `len()`
+
+The `len()` function returns the number of items in a collection.
+
+**Syntax**
+
+```python
+len(collection)
+```
+
+**Example**
+
+```{python}
+#| label: length-example
+
+print(letters)
+print(len(letters))
+```
+
+#### `set()`
+
+A set stores only unique values.
+
+**Syntax**
+
+```python
+set(collection)
+```
+
+**Example**
+
+```{python}
+#| label: set-example
+
+grade = ["9th grade",
+    "10th grade",
+    "11th grade",
+    "12th grade",
+    "9th grade",
+    "10th grade",
+    "11th grade",
+    "12th grade",
+    "11th grade",
+    "10th grade"]
+ 
+set(grade)
+```
+
+::: {.callout-note title="When to use `set()`"}
+Use `set()` to identify distinct values in a list.
+:::
+
+### Control Structures
+
+#### `for`
+
+A `for` loop repeats an action for each item in a collection.
+
+**Syntax**
+
+```python
+for item in collection:
+    print(item)
+```
+
+**Example**
+
+```{python}
+#| label: list-last-loop-example
+
+for item in letters[-3:]:
+    print(item)
+```
+
+#### `with open()`
+
+This pattern reads a file and automatically closes it when finished.
+
+**Syntax**
+
+```python
+my_list = []
+
+with open("path/to/file.txt", "r") as file:
+    for line in file:
+        clean = line.strip()
+        my_list.append(clean)
+```
+
+**Example**
+
+```{python}
+#| label: read-text-file
+
+education = []
+
+with open("data/education.txt", "r") as file:
+    for line in file:
+        newline = line.strip()
+        education.append(newline)
+
+education[:10]
+```
+
+### Methods
+
+Methods are functions that belong to an object and are called using dot notation.
+
+#### `.strip()`
+
+Removes extra whitespace (such as spaces or `"\n"`) from the beginning and end of a string.
+
+**Syntax**
+
+```python
+string.strip()
+```
+
+**Example**
+
+```{python}
+#| label: strip-example
+
+text = "  hello\n"
+clean = text.strip()
+
+print(clean)
+```
+
+::: {.callout-note title="Why `.strip()` matters"}
+Text files often contain invisible characters such as `"\n"` at the end of each line. `.strip()` removes leading and trailing whitespace from strings.
+:::
+
+#### `.append()`
+
+The `.append()` method adds one item to the end of a list.
+
+**Syntax**
+
+```python
+my_list.append(value)
+```
+
+**Example**
+
+```{python}
+#| label: append-example
+
+print(letters)
+
+letters.append("F")
+print(letters)
+```
+
+## Notebook 2: Basic Python & Data Structures
+
+### Pandas
+
+Pandas is a Python library used for working with tabular data.
+
+#### Importing & Loading Data
+
+##### `import pandas as pd`
+
+`import pandas as pd` loads the Pandas library.
+
+**Syntax**
+
+```python
+import pandas as pd
+```
+
+**Example**
+
+```{python}
+#| label: import-pandas
+
+import pandas as pd
+```
+
+- `as pd` creates a shortcut (alias).
+- `pd` is the standard alias for `pandas`.
+
+##### `pd.read_csv()`
+
+Reads a CSV file and stores it as a `DataFrame`.
+
+**Syntax**
+
+```python
+dataframe_name = pd.read_csv("file_path.csv")
+```
+
+**Example**
+
+```{python}
+#| label: read-csv-example
+
+gss = pd.read_csv("data/updated_gss.csv")
+```
+
+- Creates a `pandas` `DataFrame` named `gss`. 
+
+#### `DataFrame`
+
+- A `DataFrame` is a two-dimensional data structure with rows (observations) and columns (variables).
+
+##### `.head()`
+
+Displays the first 5 rows of a `DataFrame`.
+
+**Syntax**
+
+```python
+dataframe.head()
+```
+
+**Example**
+
+```{python}
+#| label: head-example
+
+gss.head()
+```
+
+##### `.info()`
+
+Displays structural information about a `DataFrame`.
+
+**Syntax**
+
+```python
+dataframe.info()
+```
+
+**Example**
+
+```{python}
+#| label: info-example
+
+gss.info()
+```
+
+##### `.sort_values()`
+
+Sorts the rows of a `DataFrame` based on the values in a specified column.
+
+**Syntax**
+
+```python
+dataframe.sort_values(by="column_name")
+```
+
+**Example (Ascending Order)**
+
+```{python}
+#| label: sort-ascending
+
+gss.sort_values(by="age")
+```
+
+**Example (Descending Order)**
+
+```{python}
+#| label: sort-descending
+
+gss.sort_values(by="age", ascending=False)
+```
+
+::: {.callout-note title="Display Behavior"}
+By default, Pandas shows only the first 5 and last 5 rows when a `DataFrame` is displayed, .
+:::
+
+### Selecting and Filtering Data
+
+#### `[ ]`
+
+Use bracket notation to select a single column from a `DataFrame`.
+
+**Syntax**
+
+```python
+dataframe["column_name"]
+```
+
+**Example**
+
+```{python}
+#| label: select-column-example
+
+gss["age"]
+```
+
+::: {.callout-note title="Display Behavior"}
+By default, Pandas shows only the first 5 and last 5 values of a selected column.
+:::
+
+#### `.loc[ ]`
+
+Select rows and columns using labels.
+
+**Syntax**
+
+```python
+dataframe.loc[row_condition, "column_name"]
+```
+
+**Example**
+
+```{python}
+#| label: loc-example
+
+gss.loc[gss["age"] > 40, "degree"]
+```
+
+#### `.iloc[ ]`
+
+Select rows and columns using index positions.
+
+**Syntax**
+
+```python
+dataframe.iloc[row_index, column_index]
+```
+
+**Example**
+
+```{python}
+#| label: iloc-example
+
+gss.iloc[0:5, 0:3]
+```
+
+#### Comparison Operators
+
+Rows in a `DataFrame` can be filtered using comparison conditions.
+
+| Operator | Meaning               |
+| -------- | --------------------- | 
+| `==`     | Equal to              |
+| `!=`     | Not equal             |
+| `>`      | Greater than          |
+| `<`      | Less than             |
+| `>=`     | Greater than or equal |
+| `<=`     | Less than or equal    |
+
+**Syntax**
+
+```python
+dataframe[dataframe["column_name"] comparison expression]
+```
+
+**Example**
+
+```{python}
+#| label: filtering-example
+
+gss[gss["age"] > 40]
+```
+
+#### Logical Operators
+
+Rows from a `DataFrame` can be filtered using multiple conditions.
+
+| Operator | Meaning                             |
+|----------|-------------------------------------|
+| `&`      | AND (both conditions must be true)  |
+| `|`      | OR (at least one condition is true) |
+
+**Syntax**
+
+```python
+dataframe[(condition1) & (condition2)]
+dataframe[(condition1) | (condition2)]
+```
+
+**Example**
+
+```{python}
+#| label: logical-operators-example
+
+gss[(gss["tvhours"] > 15) & (gss["happy"] == "Very happy")]
+```
+
+**Example**
+
+```{python}
+#| label: logical-mask-example
+
+mask = (gss["tvhours"] > 15) & (gss["happy"] == "Very happy")
+gss[mask]
+```
+
+::: {.callout-note title="What is `mask`?"}
+`mask` stores a condition that is used to filter rows in a `DataFrame`.
+:::
+
+#### `.isin()`
+
+Selects rows where a column matches one of several specified values.
+
+**Syntax**
+
+```python
+values = [value1, value2, ...]
+dataframe[dataframe["column_name"].isin(values)]
+```
+
+**Example**
+
+```{python}
+#| label: isin-example
+
+hap_cat = ["Very happy", "Pretty happy", "Not too happy"]
+
+mask = gss["happy"].isin(hap_cat)
+
+gss[mask]
+```
+
+### Summarizing
+
+#### `.describe()`
+
+Displays summary statistics for numeric variables in a `DataFrame`.
+
+**Syntax**
+
+```python
+dataframe.describe()
+```
+
+**Example**
+
+```{python}
+#| label: describe-example
+
+gss.describe()
+```
+
+::: {.callout-note title="Default Behavior"}
+`.describe()` summarizes all numeric columns by default, even if the numbers represent category codes rather than quantitative data.
+:::
+
+#### `.value_counts()`
+
+Displays frequency (counts) of each category in a categorical column of a `DataFrame`.
+
+**Syntax**
+
+```python
+dataframe["column_name"].value_counts()
+```
+
+**Example**
+
+```{python}
+#| label: value-counts-example
+
+gss["degree"].value_counts()
+```
+
+##### `pd.crosstab()`
+
+`pd.crosstab()` displays frequency counts for combinations of two categorical variables.
+
+**Syntax**
+
+```python
+pd.crosstab(dataframe["column1"], dataframe["column2"])
+```
+**Example**
+
+```{python}
+#| label: crosstab-counts-example
+
+deg_cat = ["Less than high school", "High school", "Bachelor's", "Graduate"]
+hap_cat = ["Very happy", "Pretty happy", "Not too happy"]
+
+deg_hap_mask = (gss["happy"].isin(hap_cat)) & (gss["degree"].isin(deg_cat))
+
+deg_hap_df = gss[deg_hap_mask]
+
+pd.crosstab(deg_hap_df["degree"], deg_hap_df["happy"])
+```
+
+### Grouping
+
+#### `.groupby()`
+
+Groups rows in a `DataFrame` based on one or more columns.
+
+**Syntax**
+
+```python
+dataframe.groupby("column_name")
+```
+
+**Example**
+
+```{python}
+#| label: groupby-example
+
+gss.groupby("degree")["age"].mean()
+```
+
+::: {.callout-note title="What `groupby()` does"}
+`.groupby()` groups data by a column so a summary statistic can be calculated for each group.
+:::
+
+## Notebook 3: Visualizing Distributions
+
+### Matplotlib
+
+`matplotlib.pyplot` is a Python library used for creating visualizations such as bar charts, histograms, and boxplots.
+
+#### `import matplotlib.pyplot as plt`
+
+`import matplotlib.pyplot as plt` loads the plotting library and assigns it the alias `plt`.
+
+**Syntax**
+
+```python
+import matplotlib.pyplot as plt
+```
+
+**Example**
+
+```{python}
+#| label: import-matplotlib.pyplot
+
+import matplotlib.pyplot as plt
+```
+
+- `as plt` creates a shortcut (alias).
+
+- `plt` is the standard alias for `matplotlib`. 
+
+#### `.plot.bar()`
+
+Bar charts show the distribution of a categorical variable and are created using `.plot.bar()`.
+
+**Syntax**
+
+```python
+dataframe["column_name"].value_counts().plot.bar()
+```
+
+**Example**
+
+```{python}
+#| label: age-group-bar-chart
+
+gss["age_group"].value_counts().plot.bar()
+plt.xlabel("")
+plt.ylabel("Count")
+plt.title("Distribution of Age Groups")
+plt.show();
+```
+
+::: {.callout-note title="Using `.value_counts()`"}
+`.value_counts()` counts each category, which provides the values used to create a bar chart.
+:::
+
+**Example**
+
+```{python}
+#| label: crosstab-bar-chart
+pd.crosstab(deg_hap_df["degree"], deg_hap_df["happy"]).plot.bar()
+
+plt.xlabel("Degree")
+plt.ylabel("Count")
+plt.title("Happiness Levels by Education Level")
+plt.legend(title="Happiness Level")
+plt.show();
+```
+
+##### Labels and Titles
+
+Use these functions to label and display the visualization.
+
+| Function       | Purpose                         |
+|----------------|---------------------------------|
+| `plt.xlabel()` | Labels the $x-$axis             |
+| `plt.ylabel()` | Labels the $y-$axis             |
+| `plt.title()`  | Adds a descriptive title        |
+| `plt.legend()` | Adds a descriptive legend title |
+| `plt.show()`   | Displays the completed plot     |
+
+#### `.hist()`
+
+Histograms show the distribution of a numeric variable and are created using `.hist()`.
+
+**Syntax**
+
+```python
+dataframe["numeric_column"].hist()
+```
+
+**Example**
+
+```{python}
+#| label: age-histogram
+
+gss["age"].hist()
+plt.xlabel("Age")
+plt.ylabel("Count")
+plt.title("Distribution of Age")
+plt.show();
+```
+
+**Example**
+
+```{python}
+#| label: age-histogram-bins
+
+gss["age"].hist(edgecolor="white", grid=False)
+plt.xlabel("Age")
+plt.ylabel("Count")
+plt.title("Distribution of Age")
+plt.show();
+```
+
+::: {.callout-note title="Improving readability"}
+Adding `edgecolor="white"` outlines the bins, and `grid=False` removes the background grid.
+:::
+
+#### `.boxplot()`
+
+Boxplots show the distribution of a numeric variable across categories.
+
+**Syntax**
+
+```python
+dataframe.boxplot(column="numeric_column", by="category_column")
+```
+
+**Example**
+
+```{python}
+#| label: tvhours-boxplot-by-age-group
+
+gss.boxplot(column="tvhours", by="age_group", vert=False, grid=False)
+plt.title("Distribution of TV Viewing by Age Group")
+plt.suptitle("")
+plt.xlabel("Hours Spent Watching Television")
+plt.ylabel("")
+plt.show();
+```
+
+::: {.callout-note title="Controlling orientation"}
+`vert=False` displays the boxplot horizontally.
+:::
+
+##### Title
+
+Use this function to label the visualization.
+
+| Function          | Purpose                              |
+|------------------|---------------------------------------|
+| `plt.suptitle()` | Controls the overall figure title     |
+
+## Notebook 4: Visualizing Trends
+
+#### `.plot()`
+
+Line charts show how a numerical variable changes over an ordered variable (such as time) and are created using `.plot()`.
+
+**Syntax**
+
+```python
+grouped = dataframe.groupby("time_column")
+grouped["numeric_column"].aggregation_function().plot()
+```
+
+**Example**
+
+```{python}
+#| label: line-plot-example
+
+grps_survey_year = gss.groupby("survey_year")
+
+grps_survey_year["wwwhr"].mean().round(2).dropna().plot()
+plt.xlabel("")
+plt.ylabel("Time (Hours)")
+plt.grid(axis="y", linestyle="--", alpha=0.6)
+plt.title("Mean Internet Usage per Week by Survey Year")
+plt.show();
+```
+
+::: {.callout-note title="Why grouping first matters"}
+Line charts require summarized data. `.groupby()` should be used before plotting to calculate summary values over time.
+:::
+
+##### Gridlines
+
+| Function     | Purpose                   |
+| ------------ | ------------------------- |
+| `plt.grid()` | Adds or removes gridlines |
+
+::: {.callout-note title="Improving readability"}
+`plt.grid(axis= y", linestyle="--", alpha=0.6)` adds light horizontal gridlines.
+:::
+
+**Example**
+
+```{python}
+#| label: line-plot-xticks-example
+wwwhr_years = range(2000, 2024, 2)
+
+grps_survey_year["wwwhr"].mean().round(2).dropna().plot(marker="o")
+plt.xticks(wwwhr_years)
+plt.xlabel("")
+plt.ylabel("Time (Hours)")
+plt.grid(axis="y", linestyle="--", alpha=0.6)
+plt.title("Mean Internet Usage per Week by Survey Year")
+plt.show();
+```
+
+::: {.callout-note title="Markers"}
+`marker="o"` adds a circle at each data point on the line.
+:::
+
+##### $x-$ticks
+
+| Function       | Purpose                   |
+| -------------- | ------------------------- |
+| `plt.xticks()` | Controls the tick labels and positions on the $x-$axis |
+
+::: {.callout-note title="Using `range()`"}
+`range(2000, 2024, 2)` generates values from 2000 up to (but not including) 2024, stepping by 2.
+:::
+
+#### `.unstack()`
+
+After grouping by two variables (time and group), `.unstack()` moves the group level into columns so each group becomes its own line. 
+
+**Syntax**
+
+```python
+grouped = dataframe.groupby(["time_column", "group_column"])
+grouped["numeric_column"].mean().dropna().round(2).unstack()
+```
+
+**Example**
+
+```{python}
+#| label: unstack-example
+
+grps_age_groups = gss.groupby(["survey_year", "age_group"])
+grps_age_groups["yearsjob"].mean().dropna().round(2).unstack()
+```
+
+**Example**
+
+```{python}
+#| label: multiline-example
+
+yearsjob_years = range(2002, 2026, 4)
+
+grps_age_groups["yearsjob"].mean().dropna().round(2).unstack().plot(marker="o")
+plt.xticks(yearsjob_years)
+plt.xlabel("")
+plt.ylabel("Years")
+plt.grid(axis="y", linestyle="--", alpha=0.6)
+plt.legend(title="Age Group")
+plt.title("Mean Years at Current Job Over Time by Age Group")
+plt.show();
+```

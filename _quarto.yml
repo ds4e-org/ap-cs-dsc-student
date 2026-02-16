@@ -6,11 +6,10 @@ book:
   title: After the AP Computer Science Data Science Capstone
   subtitle: A Teacher Guide for a Data Investigation Project
   author:
-  - name: Mahmoud Harding
-    affiliation: Data Science 4 Everyone
-  - name: Kate Lockwood
-    affiliation: St. Paul Academy and Summit School
-  date: today
+   - name: Kate Lockwood
+     affiliation: St. Paul Academy and Summit School
+   - name: Mahmoud Harding
+     affiliation: Data Science 4 Everyone
   chapters:
     - index.qmd
     - intro.qmd
@@ -30,8 +29,12 @@ format:
     theme:
       - cosmo
       - brand
+    toc: true
+    toc-depth: 5
   pdf:
     documentclass: scrreprt
+
+date: today
     
 number-sections: false
 
