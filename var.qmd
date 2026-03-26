@@ -32,7 +32,7 @@ Unless otherwise noted, variables are available for survey years 1987, 1993, 200
 | `hsbio` | Whether respondent took a high school biology course |
 | `hschem` | Whether respondent took a high school chemistry course |
 | `hsmath` | Highest level of math completed by respondent in high school |
-|  | Whether respondent took a high school physics course |
+| `hsphys` | Whether respondent took a high school physics course |
 | `hsclass1` | Respondent’s favorite high school course |
 | `dipged` | Type of high school credential earned by respondent |
 | `educ` | Highest year of school completed by respondent |
