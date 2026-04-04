@@ -100,8 +100,8 @@ print(letters[-3:])
 ```
 
 ::: {.callout-note title="Slice reminder"}
-- `[:3]` and `[:3]` both mean items at index positions 0–2
-- `[-3:]` means the last three items
+-   `[:3]` and `[:3]` both mean items at index positions 0–2
+-   `[-3:]` means the last three items
 :::
 
 #### Dictionaries (`{ }`)
@@ -110,7 +110,7 @@ Dictionaries store key–value pairs. Values are accessed using keys.
 
 **Syntax**
 
-```python
+``` python
 my_dict = {key1: value1, key2: value2}
 my_dict[key1]
 my_dict[key2]
@@ -139,8 +139,8 @@ print(phase_changes[100])
 ```
 
 ::: {.callout-note title="Lists vs Dictionaries"}
-- Use a list when order matters (index-based).
-- Use a dictionary when you need to look up values by a meaningful label (key-based).
+-   Use a list when order matters (index-based).
+-   Use a dictionary when you need to look up values by a meaningful label (key-based).
 :::
 
 ### Functions
@@ -170,7 +170,7 @@ The `len()` function returns the number of items in a collection.
 
 **Syntax**
 
-```python
+``` python
 len(collection)
 ```
 
@@ -189,7 +189,7 @@ A set stores only unique values.
 
 **Syntax**
 
-```python
+``` python
 set(collection)
 ```
 
@@ -224,7 +224,7 @@ A `for` loop repeats an action for each item in a collection.
 
 **Syntax**
 
-```python
+``` python
 for item in collection:
     print(item)
 ```
@@ -240,29 +240,38 @@ for item in letters[-3:]:
 
 #### `with open()`
 
-This pattern reads a file and automatically closes it when finished.
+This pattern reads a file from a url and automatically closes it when finished.
 
 **Syntax**
 
-```python
-my_list = []
+``` python
+import urllib.request as u
 
-with open("path/to/file.txt", "r") as file:
+base_url = "https://example.com/data/"
+filename = "file.txt"
+
+url = base_url + filename
+
+with u.urlopen(url) as file:
     for line in file:
-        clean = line.strip()
-        my_list.append(clean)
+        newline = line.decode("utf-8").strip()
+        my_list.append(newline)
 ```
 
 **Example**
 
 ```{python}
 #| label: read-text-file
+import urllib.request as u
+base_url = "https://raw.githubusercontent.com/ds4e-org/ap-cs-dsc/main/data/"
+filename = "education.txt"
+url = base_url + filename
 
 education = []
 
-with open("data/education.txt", "r") as file:
+with u.urlopen(url) as file:
     for line in file:
-        newline = line.strip()
+        newline = line.decode("utf-8").strip()
         education.append(newline)
 
 education[:10]
@@ -278,7 +287,7 @@ Removes extra whitespace (such as spaces or `"\n"`) from the beginning and end o
 
 **Syntax**
 
-```python
+``` python
 string.strip()
 ```
 
@@ -303,7 +312,7 @@ The `.append()` method adds one item to the end of a list.
 
 **Syntax**
 
-```python
+``` python
 my_list.append(value)
 ```
 
@@ -332,7 +341,7 @@ Pandas is a Python library used for working with tabular data.
 
 **Syntax**
 
-```python
+``` python
 import pandas as pd
 ```
 
@@ -344,8 +353,8 @@ import pandas as pd
 import pandas as pd
 ```
 
-- `as pd` creates a shortcut (alias).
-- `pd` is the standard alias for `pandas`.
+-   `as pd` creates a shortcut (alias).
+-   `pd` is the standard alias for `pandas`.
 
 ##### `pd.read_csv()`
 
@@ -353,7 +362,7 @@ Reads a CSV file and stores it as a `DataFrame`.
 
 **Syntax**
 
-```python
+``` python
 dataframe_name = pd.read_csv("file_path.csv")
 ```
 
@@ -365,11 +374,11 @@ dataframe_name = pd.read_csv("file_path.csv")
 gss = pd.read_csv("data/updated_gss.csv")
 ```
 
-- Creates a `pandas` `DataFrame` named `gss`. 
+-   Creates a `pandas` `DataFrame` named `gss`.
 
 #### `DataFrame`
 
-- A `DataFrame` is a two-dimensional data structure with rows (observations) and columns (variables).
+-   A `DataFrame` is a two-dimensional data structure with rows (observations) and columns (variables).
 
 ##### `.head()`
 
@@ -377,7 +386,7 @@ Displays the first 5 rows of a `DataFrame`.
 
 **Syntax**
 
-```python
+``` python
 dataframe.head()
 ```
 
@@ -395,7 +404,7 @@ Displays structural information about a `DataFrame`.
 
 **Syntax**
 
-```python
+``` python
 dataframe.info()
 ```
 
@@ -413,7 +422,7 @@ Sorts the rows of a `DataFrame` based on the values in a specified column.
 
 **Syntax**
 
-```python
+``` python
 dataframe.sort_values(by="column_name")
 ```
 
@@ -445,7 +454,7 @@ Use bracket notation to select a single column from a `DataFrame`.
 
 **Syntax**
 
-```python
+``` python
 dataframe["column_name"]
 ```
 
@@ -467,7 +476,7 @@ Select rows and columns using labels.
 
 **Syntax**
 
-```python
+``` python
 dataframe.loc[row_condition, "column_name"]
 ```
 
@@ -485,7 +494,7 @@ Select rows and columns using index positions.
 
 **Syntax**
 
-```python
+``` python
 dataframe.iloc[row_index, column_index]
 ```
 
@@ -502,7 +511,7 @@ gss.iloc[0:5, 0:3]
 Rows in a `DataFrame` can be filtered using comparison conditions.
 
 | Operator | Meaning               |
-| -------- | --------------------- | 
+|----------|-----------------------|
 | `==`     | Equal to              |
 | `!=`     | Not equal             |
 | `>`      | Greater than          |
@@ -512,7 +521,7 @@ Rows in a `DataFrame` can be filtered using comparison conditions.
 
 **Syntax**
 
-```python
+``` python
 dataframe[dataframe["column_name"] comparison expression]
 ```
 
@@ -535,7 +544,7 @@ Rows from a `DataFrame` can be filtered using multiple conditions.
 
 **Syntax**
 
-```python
+``` python
 dataframe[(condition1) & (condition2)]
 dataframe[(condition1) | (condition2)]
 ```
@@ -567,7 +576,7 @@ Selects rows where a column matches one of several specified values.
 
 **Syntax**
 
-```python
+``` python
 values = [value1, value2, ...]
 dataframe[dataframe["column_name"].isin(values)]
 ```
@@ -592,7 +601,7 @@ Displays summary statistics for numeric variables in a `DataFrame`.
 
 **Syntax**
 
-```python
+``` python
 dataframe.describe()
 ```
 
@@ -614,7 +623,7 @@ Displays frequency (counts) of each category in a categorical column of a `DataF
 
 **Syntax**
 
-```python
+``` python
 dataframe["column_name"].value_counts()
 ```
 
@@ -632,9 +641,10 @@ gss["degree"].value_counts()
 
 **Syntax**
 
-```python
+``` python
 pd.crosstab(dataframe["column1"], dataframe["column2"])
 ```
+
 **Example**
 
 ```{python}
@@ -658,7 +668,7 @@ Groups rows in a `DataFrame` based on one or more columns.
 
 **Syntax**
 
-```python
+``` python
 dataframe.groupby("column_name")
 ```
 
@@ -686,7 +696,7 @@ gss.groupby("degree")["age"].mean()
 
 **Syntax**
 
-```python
+``` python
 import matplotlib.pyplot as plt
 ```
 
@@ -698,9 +708,9 @@ import matplotlib.pyplot as plt
 import matplotlib.pyplot as plt
 ```
 
-- `as plt` creates a shortcut (alias).
+-   `as plt` creates a shortcut (alias).
 
-- `plt` is the standard alias for `matplotlib`. 
+-   `plt` is the standard alias for `matplotlib`.
 
 #### `.plot.bar()`
 
@@ -708,7 +718,7 @@ Bar charts show the distribution of a categorical variable and are created using
 
 **Syntax**
 
-```python
+``` python
 dataframe["column_name"].value_counts().plot.bar()
 ```
 
@@ -759,7 +769,7 @@ Histograms show the distribution of a numeric variable and are created using `.h
 
 **Syntax**
 
-```python
+``` python
 dataframe["numeric_column"].hist()
 ```
 
@@ -797,7 +807,7 @@ Boxplots show the distribution of a numeric variable across categories.
 
 **Syntax**
 
-```python
+``` python
 dataframe.boxplot(column="numeric_column", by="category_column")
 ```
 
@@ -822,9 +832,9 @@ plt.show();
 
 Use this function to label the visualization.
 
-| Function          | Purpose                              |
-|------------------|---------------------------------------|
-| `plt.suptitle()` | Controls the overall figure title     |
+| Function         | Purpose                           |
+|------------------|-----------------------------------|
+| `plt.suptitle()` | Controls the overall figure title |
 
 ## Notebook 4: Visualizing Trends
 
@@ -834,7 +844,7 @@ Line charts show how a numerical variable changes over an ordered variable (such
 
 **Syntax**
 
-```python
+``` python
 grouped = dataframe.groupby("time_column")
 grouped["numeric_column"].aggregation_function().plot()
 ```
@@ -861,7 +871,7 @@ Line charts require summarized data. `.groupby()` should be used before plotting
 ##### Gridlines
 
 | Function     | Purpose                   |
-| ------------ | ------------------------- |
+|--------------|---------------------------|
 | `plt.grid()` | Adds or removes gridlines |
 
 ::: {.callout-note title="Improving readability"}
@@ -889,8 +899,8 @@ plt.show();
 
 ##### $x-$ticks
 
-| Function       | Purpose                   |
-| -------------- | ------------------------- |
+| Function       | Purpose                                                |
+|----------------|--------------------------------------------------------|
 | `plt.xticks()` | Controls the tick labels and positions on the $x-$axis |
 
 ::: {.callout-note title="Using `range()`"}
@@ -899,11 +909,11 @@ plt.show();
 
 #### `.unstack()`
 
-After grouping by two variables (time and group), `.unstack()` moves the group level into columns so each group becomes its own line. 
+After grouping by two variables (time and group), `.unstack()` moves the group level into columns so each group becomes its own line.
 
 **Syntax**
 
-```python
+``` python
 grouped = dataframe.groupby(["time_column", "group_column"])
 grouped["numeric_column"].mean().dropna().round(2).unstack()
 ```
