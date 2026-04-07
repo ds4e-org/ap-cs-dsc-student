@@ -2,49 +2,41 @@
 title: Dataset
 ---
 
-## General Social Survey
+## About the Dataset
 
-The project uses data from the [General Social Survey (GSS)](https://gss.norc.org/). The GSS is primarily funded by the National Science Foundation (NSF) and conducted by the [National Opinion Research Center (NORC)](https://www.norc.org/), a non-partisan research organization. The GSS collects data on a variety of topics in contemporary American society to monitor and explain trends in opinions, attitudes, and behaviors.
+This project uses data from the [General Social Survey (GSS)](https://gss.norc.org/), a long-running survey that collects information about people in the United States. It includes topics like education, opinions, behaviors, and social trends.
 
-The GSS contains a standard core of demographic, behavioral, and attitudinal questions, plus topics of special interest. Among the topics covered are education, civil liberties, national spending priorities, psychological well-being, and social mobility. It allows researchers to examine the structure and functioning of society in general, as well as the role played by relevant subgroups.
-
-## About the General Social Survey
-
-The GSS is a nationally representative series of cross-sectional interviews conducted in the United States since 1972. By adapting questions from earlier surveys, the GSS enables comparisons across decades. Originally proposed by James A. Davis, the survey has been administered by NORC at the University of Chicago and funded by the NSF since its inception. The GSS is currently designed by a set of Principal Investigators, with guidance from a Board of researchers.
-
-In response to the COVID-19 pandemic, the 2021 GSS implemented methodological changes, including a shift to address-based sampling with a push-to-web, self-administered questionnaire. The 2022 GSS was designed as a bridge between the traditional face-to-face data collection used from 1972–2018 and the web-based approach introduced in 2021. It retained many questionnaire changes from the web mode while returning to a mixed-mode design that included face-to-face, web, and telephone data collection. The 2022 GSS was structured to facilitate comparison with the 2018 GSS and represents the first stage of a broader transition to a mixed-mode survey.
+The GSS has been conducted since 1972 and is used by researchers to study how society changes over time.
 
 ## The Project Dataset
 
-The dataset used for this project is a subset of the full GSS dataset, downloaded on December 31, 2025. The original dataset contained 46 variables and 75,699 observations.
+The dataset you are using is a subset of the full GSS. It has been selected and prepared to make it easier to explore in this project.
 
-### Data Preparation & Cleaning
+## What Was Changed?
 
-The dataset used in this project is based on the original GSS data but includes pre-processing steps to support classroom use and analysis.
+Before you received the dataset, a few adjustments were made:
 
-The following changes were made prior to student use:
+- A smaller set of relevant variables was selected  
+- Some variables were renamed for clarity  
+- A new variable, `age_group`, was created  
+- The variable `wwwhr` was converted to numeric values  
+- The dataset was limited to respondents age 51 and under  
+- Some missing or unclear responses were cleaned or left as-is  
 
--   A subset of variables and observations relevant to the project was selected.
--   Non-substantive response codes (e.g., `.i:  Inapplicable`, `.n:  No answer`) were kept in their original form; some were removed or recoded during cleaning.
--   The variable `age_group` was created.
--   Variables originally labeled `cohort` and `year` were renamed to `birth_year` and `survey_year`.
--   The variable `wwwhr` was recoded from categorical response values to numeric.
--   The dataset was filtered to include respondents age 51 and under.
+This means you are working with a prepared dataset, not the raw original data.
 
-These steps were taken to reduce complexity while preserving the structure and integrity of the original survey data.
+## How the Data Is Organized
 
-Teachers and students should be aware that the dataset is not a raw extract from the GSS, but a prepared version intended for instructional use.
+The dataset is structured to make analysis easier:
 
-### Tidy and Tame Data Considerations
+- Each row represents one person  
+- Each column represents one variable  
+- Each cell contains a single value  
 
-The project dataset has been prepared to follow principles of tidy data [@wickham2014tidydata] and tame data [@kim2018fivethirtyeight] to support exploratory analysis.
+The data has been simplified so you can focus on:
 
-In this dataset:
+- Asking questions  
+- Exploring patterns  
+- Interpreting results  
 
--   Each row represents a single institution.
--   Each column represents a single variable.
--   Each cell contains a single, well-defined value.
-
-Variables were also selected and organized to make the dataset *tame*, meaning, manageable, interpretable, and appropriate for classroom analysis. This includes limiting the number of variables, using consistent naming conventions, and providing variables that are meaningful for comparative analysis across institutions.
-
-These design choices reduce unnecessary data wrangling and allow students to focus on asking questions, exploring patterns, and interpreting results, while still working with authentic, real-world data.
+while still working with real-world data.

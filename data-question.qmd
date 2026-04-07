@@ -1,0 +1,345 @@
+---
+title: "Developing a Data Question and Exploring Your Variables"
+---
+
+## Overview
+
+In this section, you will choose new variables from the dataset, develop a data question, prepare your data, summarize it, create a visualization, and describe what you notice.
+
+By the end of this section, you should have:
+
+-   selected variables you want to explore
+-   written a clear data question
+-   prepared and summarized your data
+-   created a graph to answer your question
+-   written a short explanation of what you found
+
+## Part 1: Choose Your Variables and Develop Your Question
+
+### Step 1: Look through the list of variables
+
+Open the list of variables here: **\[Insert Link\]**
+
+Find **two or three variables** that were not used in the previous notebooks and that you are interested in exploring.
+
+Choose variables that seem interesting, meaningful, or likely to show differences across groups or over time.
+
+**Write the variables you are considering here:**
+
+-   Variable 1:\
+-   Variable 2:\
+-   Variable 3:
+
+### Step 2: Choose one variable to investigate
+
+Now choose **one** of the variables from Step 1 to investigate further.
+
+For example, in Notebook 3, we explored the variable `wwwhr`, which represented the number of non-email hours respondents spent on the Internet. A good variable to investigate is one that you think might show interesting patterns or differences.
+
+Before moving on, examine the column of data so that you understand:
+
+-   what the variable represents
+-   what values appear in the column
+-   whether the values are numerical or categorical
+-   how many rows contain usable data
+
+**Answer the following questions:**
+
+-   What variable will you investigate?\
+-   What type of data does this variable contain: categorical or numerical?\
+-   What do the values in this column represent?\
+-   Do you notice any missing values or unusual values?
+
+### Step 3: Decide how you will split the data for comparison
+
+Next, decide how you want to compare your variable.
+
+There are two common approaches:
+
+-   **Across groups**: comparing a variable across categories\
+-   **Across time**: comparing a variable across years
+
+For example:
+
+-   When we compared `wwwhr` across age groups, we were comparing values **across groups**.
+-   In Notebook 4, when we created a line chart, we were comparing `wwwhr` **across time** using survey years.
+
+Now decide how you will split your data for comparison.
+
+**Answer the following question:**
+
+-   How will you split your variable for comparison?
+    -   Across groups\
+    -   Across time
+
+If you are comparing across groups, identify the grouping variable you will use.\
+If you are comparing across time, you will usually use the survey year variable.
+
+**Write your comparison variable here:**
+
+-   Comparison variable:
+
+### Step 4: Write your data question
+
+Now write the question you want to answer with your comparison.
+
+Your question should involve your main variable and how it compares across groups or across time.
+
+Here are two examples:
+
+-   How do happiness responses differ across education levels?
+-   How has the average number of hours of leisure changed across survey years?
+
+**Write your question here:**
+
+-   My data question:
+
+## Part 2: Use the Data to Answer Your Question
+
+Now that you have defined your question, the next step is to use the data to answer it.
+
+------------------------------------------------------------------------
+
+## Step 1: Prepare your data
+
+The first step is to prepare the data you need for your analysis.
+
+This might include:
+
+-   creating a new table with only the columns you need
+-   removing rows with missing values
+-   checking that the variable types make sense
+-   renaming variables if needed for clarity
+
+For example:
+
+-   In earlier notebooks, you created smaller tables using only the columns needed for the analysis.
+-   You also used methods such as `.dropna()` to remove missing values before summarizing or graphing.
+
+### What to do
+
+Create a new table that includes only the columns you need for your question.
+
+For most projects, this table will include:
+
+-   the variable you want to investigate
+-   the variable you are using to split the data for comparison
+
+Then clean the data so that only usable rows remain.
+
+### Template code
+
+Replace the placeholder names with the variables for your project.
+
+``` python
+# Create a table with only the columns needed for the analysis
+my_data = gss[["main_variable", "comparison_variable"]].copy()
+
+# Display the first five rows
+my_data.head()
+```
+
+``` python
+# Remove rows with missing values in the columns you need
+my_data = my_data.dropna(subset=["main_variable", "comparison_variable"])
+
+# Check the number of remaining rows
+my_data.shape
+```
+
+``` python
+# Display the first five rows of the cleaned table
+my_data.head()
+```
+
+### Your work
+
+Insert your code blocks below.\
+Your **last code block in this section should print the first five rows** of your prepared table.
+
+``` python
+# Write your code here
+```
+
+``` python
+# Write your code here
+```
+
+``` python
+# Your final code block in this section should display the first five rows
+```
+
+------------------------------------------------------------------------
+
+## Step 2: Summarize the data for visualization
+
+Next, summarize your data so it is ready to visualize.
+
+The way you summarize depends on the type of variable you are investigating.
+
+### If your main variable is categorical
+
+Use **counts** or **proportions** by group or year.
+
+For example, in Notebook 3, you counted the number of respondents in each category.
+
+#### Example
+
+``` python
+# Count the number of responses in each category
+summary_table = (
+    my_data.groupby("comparison_variable")["main_variable"]
+    .value_counts()
+    .reset_index(name="count")
+)
+
+summary_table.head()
+```
+
+### If your main variable is numerical
+
+Use **averages** or **medians** by group or year.
+
+For example, in Notebook 4, you calculated the average value of `wwwhr` for each year.
+
+#### Example
+
+``` python
+# Calculate the mean of the numerical variable by group or year
+summary_table = (
+    my_data.groupby("comparison_variable")["main_variable"]
+    .mean()
+    .round(2)
+    .reset_index(name="mean_value")
+)
+
+summary_table.head()
+```
+
+### What to do
+
+Choose the summary that matches your question:
+
+-   For categorical variables, use counts or proportions
+-   For numerical variables, use averages or medians
+
+Then create a summary table that you can use to build your graph.
+
+### Your work
+
+Insert your code blocks below.\
+Your **last code block in this section should display your summarized data table**.
+
+``` python
+# Write your code here
+```
+
+``` python
+# Write your code here
+```
+
+``` python
+# Your final code block in this section should display your summarized data table
+```
+
+------------------------------------------------------------------------
+
+## Step 3: Create a visualization
+
+Now create a graph that shows the comparison in your question.
+
+Choose a graph type that matches your data and summary.
+
+### Suggested graph types
+
+-   **Grouped bar chart** for comparing categorical responses across groups
+-   **Bar chart** for comparing numerical summaries across groups
+-   **Line chart** for showing how a numerical summary changes over time
+
+### Reminder
+
+Make sure your graph includes:
+
+-   a clear title
+-   labeled axes
+-   readable category or year labels
+
+### Example: Bar chart
+
+``` python
+summary_table.plot(
+    x="comparison_variable",
+    y="mean_value",
+    kind="bar",
+    legend=False
+)
+
+plt.title("Insert Title Here")
+plt.xlabel("Insert X-Axis Label Here")
+plt.ylabel("Insert Y-Axis Label Here")
+plt.show()
+```
+
+### Example: Line chart
+
+``` python
+summary_table.plot(
+    x="comparison_variable",
+    y="mean_value",
+    kind="line",
+    marker="o",
+    legend=False
+)
+
+plt.title("Insert Title Here")
+plt.xlabel("Insert X-Axis Label Here")
+plt.ylabel("Insert Y-Axis Label Here")
+plt.show()
+```
+
+### Your work
+
+Insert your code below.
+
+``` python
+# Write your code here
+```
+
+------------------------------------------------------------------------
+
+## Step 4: Describe what you found
+
+Write a short explanation describing the patterns, trends, or differences you see in your summary table and graph.
+
+Be specific. Refer to the categories, years, counts, proportions, averages, or medians shown in your results.
+
+### Questions to consider
+
+Use questions like these to help you write your explanation:
+
+-   What pattern do you notice in the graph?
+-   Which group or year has the highest value?
+-   Which group or year has the lowest value?
+-   Are there any large differences across groups?
+-   Do you notice an increase, decrease, or other trend over time?
+-   Are there any categories or years that stand out?
+-   Does the graph answer your original question? If so, how?
+
+### Your written response
+
+Write your explanation here.
+
+------------------------------------------------------------------------
+
+## Final Check
+
+Before moving on, make sure you have completed all of the following:
+
+-   selected new variables to explore
+-   chosen one main variable to investigate
+-   identified how you will split the data for comparison
+-   written a clear data question
+-   prepared a clean data table
+-   created a summary table
+-   made a graph with a title and labeled axes
+-   written a short explanation of your findings

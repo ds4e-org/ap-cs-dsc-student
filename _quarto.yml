@@ -4,7 +4,7 @@ project:
 
 book:
   title: After the AP Data Science Capstone (AP Computer Science)
-  subtitle: A Teacher Guide for a Data Investigation Project
+  subtitle: A Student Guide for a Data Investigation Project
   author:
    - name: Kate Lockwood
      affiliation: St. Paul Academy and Summit School
@@ -17,9 +17,8 @@ book:
     - var.qmd
     - tips.qmd
     - commands.qmd
-    - resources.qmd
+    - visualization.qmd
     - references.qmd
-    - partners.qmd
 
 bibliography: references.bib
 

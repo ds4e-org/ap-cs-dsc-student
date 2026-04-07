@@ -1,12 +1,42 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "After the AP Data Science Capstone (AP Computer Science)",
+    "objectID": "dataset.html",
+    "href": "dataset.html",
+    "title": "Dataset",
     "section": "",
-    "text": "Designed by Freepik\n\n\nThis resource is intended for high school computer science teachers seeking to extend student learning beyond AP Computer Science courses. It provides a teacher-facing guide for the After the AP Capstone.\nThe materials for the capstone are designed for students who have completed AP Computer Science Principles or AP Computer Science A, or who have comparable experience with text-based programming. :::::::::",
+    "text": "About the Dataset\nThis project uses data from the General Social Survey (GSS), a long-running survey that collects information about people in the United States. It includes topics like education, opinions, behaviors, and social trends.\nThe GSS has been conducted since 1972 and is used by researchers to study how society changes over time.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Preface</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Dataset</span>"
+    ]
+  },
+  {
+    "objectID": "dataset.html#the-project-dataset",
+    "href": "dataset.html#the-project-dataset",
+    "title": "Dataset",
+    "section": "The Project Dataset",
+    "text": "The Project Dataset\nThe dataset you are using is a subset of the full GSS. It has been selected and prepared to make it easier to explore in this project.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Dataset</span>"
+    ]
+  },
+  {
+    "objectID": "dataset.html#what-was-changed",
+    "href": "dataset.html#what-was-changed",
+    "title": "Dataset",
+    "section": "What Was Changed?",
+    "text": "What Was Changed?\nBefore you received the dataset, a few adjustments were made:\n\nA smaller set of relevant variables was selected\n\nSome variables were renamed for clarity\n\nA new variable, age_group, was created\n\nThe variable wwwhr was converted to numeric values\n\nThe dataset was limited to respondents age 51 and under\n\nSome missing or unclear responses were cleaned or left as-is\n\nThis means you are working with a prepared dataset, not the raw original data.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Dataset</span>"
+    ]
+  },
+  {
+    "objectID": "dataset.html#how-the-data-is-organized",
+    "href": "dataset.html#how-the-data-is-organized",
+    "title": "Dataset",
+    "section": "How the Data Is Organized",
+    "text": "How the Data Is Organized\nThe dataset is structured to make analysis easier:\n\nEach row represents one person\n\nEach column represents one variable\n\nEach cell contains a single value\n\nThe data has been simplified so you can focus on:\n\nAsking questions\n\nExploring patterns\n\nInterpreting results\n\nwhile still working with real-world data.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Dataset</span>"
     ]
   },
   {
@@ -37,36 +67,6 @@
     "text": "Dataset\nThe project uses data from the General Social Survey (GSS). The GSS is primarily funded by the National Science Foundation (NSF) and conducted by the National Opinion Research Center (NORC), a non-partisan research organization. The GSS collects data on a variety of topics in contemporary American society to monitor and explain trends in opinions, attitudes, and behaviors.\nThe GSS contains a standard core of demographic, behavioral, and attitudinal questions, plus topics of special interest. Among the topics covered are education, civil liberties, national spending priorities, psychological well-being, and social mobility. It allows researchers to examine the structure and functioning of society in general, as well as the role played by relevant subgroups.\n\n\n\n\nHunter, John D. 2007. “Matplotlib: A 2D Graphics Environment.” Computing in Science & Engineering 9 (3): 90–95. https://matplotlib.org/.\n\n\nMcKinney, Wes. 2010. “Data Structures for Statistical Computing in Python.” Proceedings of the 9th Python in Science Conference, 56–61. https://doi.org/10.25080/Majora-92bf1922-00a.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction</span>"
-    ]
-  },
-  {
-    "objectID": "dataset.html",
-    "href": "dataset.html",
-    "title": "Dataset",
-    "section": "",
-    "text": "General Social Survey\nThe project uses data from the General Social Survey (GSS). The GSS is primarily funded by the National Science Foundation (NSF) and conducted by the National Opinion Research Center (NORC), a non-partisan research organization. The GSS collects data on a variety of topics in contemporary American society to monitor and explain trends in opinions, attitudes, and behaviors.\nThe GSS contains a standard core of demographic, behavioral, and attitudinal questions, plus topics of special interest. Among the topics covered are education, civil liberties, national spending priorities, psychological well-being, and social mobility. It allows researchers to examine the structure and functioning of society in general, as well as the role played by relevant subgroups.",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Dataset</span>"
-    ]
-  },
-  {
-    "objectID": "dataset.html#about-the-general-social-survey",
-    "href": "dataset.html#about-the-general-social-survey",
-    "title": "Dataset",
-    "section": "About the General Social Survey",
-    "text": "About the General Social Survey\nThe GSS is a nationally representative series of cross-sectional interviews conducted in the United States since 1972. By adapting questions from earlier surveys, the GSS enables comparisons across decades. Originally proposed by James A. Davis, the survey has been administered by NORC at the University of Chicago and funded by the NSF since its inception. The GSS is currently designed by a set of Principal Investigators, with guidance from a Board of researchers.\nIn response to the COVID-19 pandemic, the 2021 GSS implemented methodological changes, including a shift to address-based sampling with a push-to-web, self-administered questionnaire. The 2022 GSS was designed as a bridge between the traditional face-to-face data collection used from 1972–2018 and the web-based approach introduced in 2021. It retained many questionnaire changes from the web mode while returning to a mixed-mode design that included face-to-face, web, and telephone data collection. The 2022 GSS was structured to facilitate comparison with the 2018 GSS and represents the first stage of a broader transition to a mixed-mode survey.",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Dataset</span>"
-    ]
-  },
-  {
-    "objectID": "dataset.html#the-project-dataset",
-    "href": "dataset.html#the-project-dataset",
-    "title": "Dataset",
-    "section": "The Project Dataset",
-    "text": "The Project Dataset\nThe dataset used for this project is a subset of the full GSS dataset, downloaded on December 31, 2025. The original dataset contained 46 variables and 75,699 observations.\n\nData Preparation & Cleaning\nThe dataset used in this project is based on the original GSS data but includes pre-processing steps to support classroom use and analysis.\nThe following changes were made prior to student use:\n\nA subset of variables and observations relevant to the project was selected.\nNon-substantive response codes (e.g., .i:  Inapplicable, .n:  No answer) were kept in their original form; some were removed or recoded during cleaning.\nThe variable age_group was created.\nVariables originally labeled cohort and year were renamed to birth_year and survey_year.\nThe variable wwwhr was recoded from categorical response values to numeric.\nThe dataset was filtered to include respondents age 51 and under.\n\nThese steps were taken to reduce complexity while preserving the structure and integrity of the original survey data.\nTeachers and students should be aware that the dataset is not a raw extract from the GSS, but a prepared version intended for instructional use.\n\n\nTidy and Tame Data Considerations\nThe project dataset has been prepared to follow principles of tidy data (Wickham 2014) and tame data (Kim, Ismay, and Chunn 2018) to support exploratory analysis.\nIn this dataset:\n\nEach row represents a single institution.\nEach column represents a single variable.\nEach cell contains a single, well-defined value.\n\nVariables were also selected and organized to make the dataset tame, meaning, manageable, interpretable, and appropriate for classroom analysis. This includes limiting the number of variables, using consistent naming conventions, and providing variables that are meaningful for comparative analysis across institutions.\nThese design choices reduce unnecessary data wrangling and allow students to focus on asking questions, exploring patterns, and interpreting results, while still working with authentic, real-world data.\n\n\n\n\nKim, Albert Y., Chester Ismay, and Jennifer Chunn. 2018. “The Fivethirtyeight r Package: ’Tame Data’ Principles for Introductory Statistics and Data Science Courses.” Technology Innovations in Statistics Education 11 (1). https://escholarship.org/uc/item/0rx1231m.\n\n\nWickham, Hadley. 2014. “Tidy Data.” Journal of Statistical Software 59. https://doi.org/10.18637/jss.v059.i10.",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Dataset</span>"
     ]
   },
   {
@@ -200,83 +200,193 @@
     ]
   },
   {
-    "objectID": "commands.html#notebook-5-exploring-relationships-and-trends",
-    "href": "commands.html#notebook-5-exploring-relationships-and-trends",
-    "title": "Useful Python Commands",
-    "section": "Notebook 5: Exploring Relationships and Trends",
-    "text": "Notebook 5: Exploring Relationships and Trends",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Useful Python Commands</span>"
-    ]
-  },
-  {
-    "objectID": "resources.html",
-    "href": "resources.html",
-    "title": "Resources",
+    "objectID": "visualization.html",
+    "href": "visualization.html",
+    "title": "Customizing Visualizations",
     "section": "",
-    "text": "Video Resources\nThe General Social Survey (GSS) YouTube channel has an educational video series designed to support instructors, students, and researchers using GSS data.\nThe following videos provide an overview of the General Social Survey (GSS), from survey design and sampling to data access and instructional use.",
+    "text": "Overview\nThis section gives several simple ways to customize visualizations in Python using Pandas and Matplotlib. It provides a brief overview of common customization options.\nFor a helpful introduction with examples, see the Visualization with Matplotlib chapter in The Python Data Science Handbook by Jake VanderPlas: Introduction to Matplotlib: Visualization with Matplotlib\nFor a full list of customization options and parameters, refer to the Matplotlib pyplot documentation https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.html",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Resources</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Customizing Visualizations</span>"
     ]
   },
   {
-    "objectID": "resources.html#video-resources",
-    "href": "resources.html#video-resources",
-    "title": "Resources",
+    "objectID": "visualization.html#box-plots",
+    "href": "visualization.html#box-plots",
+    "title": "Customizing Visualizations",
+    "section": "Box Plots",
+    "text": "Box Plots\n\nBasic Box Plot\nIn this section, we customize a box plot showing the distribution of weekly internet usage (in hours) across groups.\n\ngss.boxplot(\"wwwhr\")\nplt.xlabel(\"Time (Hours)\")\nplt.title(\"Distribution of Weekly Internet Usage\")\nplt.suptitle(\"\")\nplt.show();\n\n\n\n\n\n\n\n\n\n\nGrid and Orientation\nYou can remove the grid and change the orientation of a box plot to make it easier to read.\n\ngrid=False removes the gridlines\nvert=True creates a vertical box plot\n\nvert=False creates a horizontal box plot\n\nA horizontal box plot is often easier to read, especially when labels are long.\n\ngss.boxplot(\"wwwhr\", vert=False, grid=False)\nplt.xlabel(\"Time (Hours)\")\nplt.title(\"Distribution of Weekly Internet Usage\")\nplt.suptitle(\"\")\nplt.show();\n\n\n\n\n\n\n\n\n\n\nGrouping\nYou can create multiple box plots to compare distributions across groups using the by parameter.\n\ngss.boxplot(column=\"wwwhr\", by=\"age_group\", vert=False, grid=False)\nplt.xlabel(\"Time (Hours)\")\nplt.ylabel(\"\")\nplt.title(\"Weekly Internet Usage by Age Group\")\nplt.suptitle(\"\")\nplt.show();",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Customizing Visualizations</span>"
+    ]
+  },
+  {
+    "objectID": "visualization.html#bar-charts",
+    "href": "visualization.html#bar-charts",
+    "title": "Customizing Visualizations",
+    "section": "Bar Charts",
+    "text": "Bar Charts\nIn this section, we customize a bar chart showing the number of respondents in age group across all survey years.\n\nBasic Bar Chart\n\nage_group_count.plot(kind=\"bar\")\nplt.xlabel(\"\")\nplt.ylabel(\"Count\")\nplt.title(\"Distribution of Age Groups\")\nplt.show();\n\n\n\n\n\n\n\n\n\n\nBar Color and Borders\nYou can change the color of the bars and add borders to make them easier to distinguish.\n\ncolor sets the fill color of the bars\n\nedgecolor sets the border color\n\nlinewidth controls the thickness of the border\n\nSome common color choices include \"blue\", \"red\", \"green\", \"purple\", and \"teal\".\n\nage_group_count.plot(kind=\"bar\", color=\"teal\", edgecolor=\"black\", linewidth=1)\nplt.xlabel(\"\")\nplt.ylabel(\"Count\")\nplt.title(\"Distribution of Age Groups\")\nplt.show();\n\n\n\n\n\n\n\n\n\n\nTick Labels\nYou can customize tick labels to improve readability.\n\nRotate labels if they overlap\n\nAdjust their size if needed\n\n\nage_group_count.plot(kind=\"bar\", color=\"teal\", edgecolor=\"black\", linewidth=1)\nplt.xticks(rotation=0)\nplt.xlabel(\"\")\nplt.ylabel(\"Count\")\nplt.title(\"Distribution of Age Groups\")\nplt.show();\n\n\n\n\n\n\n\n\n\n\nLegend\nA legend helps identify groups when there are multiple sets of bars.\n\nage_group_happy_count.plot(kind=\"bar\", edgecolor=\"white\", linewidth=1)\nplt.xticks(rotation=0)\nplt.xlabel(\"\")\nplt.ylabel(\"Count\")\nplt.title(\"Distribution of Happiness Level by Age Group\")\n\n# Add legend and customize legend title\nplt.legend(title=\"Happiness Categories\")\nplt.show();",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Customizing Visualizations</span>"
+    ]
+  },
+  {
+    "objectID": "visualization.html#line-charts",
+    "href": "visualization.html#line-charts",
+    "title": "Customizing Visualizations",
+    "section": "Line Charts",
+    "text": "Line Charts\nIn this section, we customize a line chart showing the mean weekly internet usage (in hours) by survey year.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Customizing Visualizations</span>"
+    ]
+  },
+  {
+    "objectID": "visualization.html#histograms",
+    "href": "visualization.html#histograms",
+    "title": "Customizing Visualizations",
+    "section": "Histograms",
+    "text": "Histograms\n\nBasic Histogram\nIn this section, we customize a histogram showing the distribution of weekly internet usage (in hours).\n\ngss[\"wwwhr\"].plot(kind=\"hist\")\nplt.xlabel(\"Time (Hours)\")\nplt.ylabel(\"Frequency\")\nplt.title(\"Distribution of Weekly Internet Usage\")\nplt.show();\n\n\n\n\n\n\n\n\n\n\nNumber of Bins\nYou can control how the data is grouped using the bins parameter.\n\nMore bins show more detail\n\nFewer bins show a smoother, less detailed distribution\n\n\ngss[\"wwwhr\"].plot(kind=\"hist\", bins=20)\nplt.xlabel(\"Time (Hours)\")\nplt.ylabel(\"Frequency\")\nplt.title(\"Distribution of Weekly Internet Usage\")\nplt.show();\n\n\n\n\n\n\n\n\n\n\nBar Color and Borders\nYou can change the color of the bars and add borders to make them easier to distinguish.\n\ncolor sets the fill color\n\nedgecolor sets the border color\n\n\ngss[\"wwwhr\"].plot(kind=\"hist\", bins=20, color=\"teal\", edgecolor=\"white\")\nplt.xlabel(\"Time (Hours)\")\nplt.ylabel(\"Frequency\")\nplt.title(\"Distribution of Weekly Internet Usage\")\nplt.show();",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Customizing Visualizations</span>"
+    ]
+  },
+  {
+    "objectID": "visualization.html#basic-line-chart",
+    "href": "visualization.html#basic-line-chart",
+    "title": "Customizing Visualizations",
+    "section": "Basic Line Chart",
+    "text": "Basic Line Chart\n\nmean_wwwhr.plot()\nplt.xlabel(\"\")\nplt.ylabel(\"Time (Hours)\")\nplt.title(\"Mean Weekly Internet Usage by Survey Year\")\nplt.show();\n\n\n\n\n\n\n\n\n\nMarkers and Lines\nYou can add a marker and change the color of the line to make the graph more visually distinctive.\nMarkers show the individual data points on a line. They help you see exactly where each value occurs, rather than just the overall trend.\nCommon marker styles include:\n\n\"o\" for circles\n\"s\" for squares\n\"^\" for triangles\n\"x\" for x-shaped markers\n\"*\" for stars\n\nYou can also adjust the marker size using the markersize parameter:\n\nLarger values make markers easier to see\nSmaller values reduce clutter when there are many points\n\nFor example:\n\nmarkersize=4 (smaller markers)\nmarkersize=8 (larger markers)\n\nSome common color choices include \"blue\", \"red\", \"green\", \"purple\", and \"teal\".\nYou can also adjust the line width using the linewidth parameter:\n\nThicker lines make trends easier to see\nThinner lines can make the plot look less crowded\n\nFor example:\n\nlinewidth=1 (thin line)\nlinewidth=3 (thicker line)\n\n\nmean_wwwhr.plot(marker=\"o\", markersize=4, linewidth=1, color=\"teal\")\nplt.xlabel(\"\")\nplt.ylabel(\"Time (Hours)\")\nplt.title(\"Mean Weekly Internet Usage by Survey Year\")\nplt.show();\n\n\n\n\n\n\n\n\n\n\nLine Style\nYou can change how the line connecting the points looks.\n\nmean_wwwhr.plot(marker=\"o\", color=\"teal\", linestyle=\":\")\nplt.xlabel(\"\")\nplt.ylabel(\"Time (Hours)\")\nplt.title(\"Mean Weekly Internet Usage by Survey Year\")\nplt.show();\n\n\n\n\n\n\n\n\nSome line style options include:\n\n\"-\" for solid\n\"--\" for dashed\n\":\" for dotted\n\"-.\" for dash-dot\n\n\n\nTick Labels\nYou can customize tick labels by specifying which values appear on the axis, rotating them, or adjusting their size to improve readability.\n\n# Create evenly spaced tick marks every two years\n# using range(start, stop, step)\nwwwhr_years = range(2000, 2024, 2)\n\nmean_wwwhr.plot(marker=\"o\", color=\"teal\", linestyle=\":\")\nplt.xticks(wwwhr_years, rotation=45)\nplt.xlabel(\"\")\nplt.ylabel(\"Time (Hours)\")\nplt.title(\"Mean Weekly Internet Usage by Survey Year\")\nplt.show();\n\n\n\n\n\n\n\n\n\n\nGridlines\nGridlines can make it easier to estimate values from the graph.\n\n# Create evenly spaced tick marks every two years\nwwwhr_years = range(2000, 2024, 2)\n\nmean_wwwhr.plot(marker=\"o\", color=\"teal\", linestyle=\":\")\nplt.xticks(wwwhr_years, rotation=45)\nplt.xlabel(\"\")\nplt.ylabel(\"Time (Hours)\")\nplt.title(\"Mean Weekly Internet Usage by Survey Year\")\n\n# Add horizontal gridlines aligned with tick marks\nplt.grid(axis=\"y\", linestyle=\":\", alpha=0.8)\nplt.show();\n\n\n\n\n\n\n\n\n\n\nLegend\nA legend helps identify each line, especially when working with graphs that have more than one line.\nIn this section, we customize a line chart showing the mean weekly internet usage (in hours) by age group and survey year.\n\n# Create evenly spaced tick marks every two years\nwwwhr_years = range(2000, 2024, 2)\n\nmean_wwwhr_age_groups.plot(marker=\"o\")\nplt.xticks(wwwhr_years, rotation=45)\nplt.xlabel(\"\")\nplt.ylabel(\"Time (Hours)\")\nplt.title(\"Mean Weekly Internet Usage by Survey Year\")\n\n# Add horizontal gridlines aligned with tick marks\nplt.grid(axis=\"y\", linestyle=\":\", alpha=0.6)\n\n# Add a legend\nplt.legend()\nplt.show();",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Customizing Visualizations</span>"
+    ]
+  },
+  {
+    "objectID": "visualization.html#markers-and-line-color",
+    "href": "visualization.html#markers-and-line-color",
+    "title": "Customizing Visualizations",
+    "section": "Markers and Line Color",
+    "text": "Markers and Line Color\nYou can add a marker and change the color of the line to make the graph more visually distinctive.\nMarkers show the individual data points on a line. They help you see exactly where each value occurs, rather than just the overall trend.\nCommon marker styles include:\n\n\"o\" for circles\n\"s\" for squares\n\"^\" for triangles\n\"x\" for x-shaped markers\n\"*\" for stars\n\nSome common color choices include \"blue\", \"red\", \"green\", \"purple\", and \"teal\".\n\nmean_wwwhr.plot(marker=\"o\", color=\"teal\")\nplt.xlabel(\"\")\nplt.ylabel(\"Time (Hours)\")\nplt.title(\"Mean Weekly Internet Usage by Survey Year\")\nplt.show();",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Customizing Visualizations</span>"
+    ]
+  },
+  {
+    "objectID": "visualization.html#setup",
+    "href": "visualization.html#setup",
+    "title": "Customizing Visualizations",
+    "section": "Setup",
+    "text": "Setup\n\nimport pandas as pd\nimport matplotlib.pyplot as plt",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Customizing Visualizations</span>"
+    ]
+  },
+  {
+    "objectID": "visualization.html#overview",
+    "href": "visualization.html#overview",
+    "title": "Customizing Visualizations",
     "section": "",
-    "text": "Video\nDescription\n\n\n\n\nIntroduction to the GSS\nBrief overview of the GSS, including its history, key stakeholders, and selected academic contributions. Positions the GSS as a widely used data resource for undergraduate instruction and research.\n\n\nGSS Project Process & Life Cycle\nExplains the full lifecycle of the GSS survey, including proposal review, testing, programming, pilot studies, data collection, cleaning, dissemination, and user support.\n\n\nThe GSS Structure & Basics\nDescribes the structure of the GSS, including core content, experiments, cross-sectional and panel studies, ISSP modules, and the balloting process. Covers basic skills for navigating, downloading, and interpreting GSS data.\n\n\nSampling in the GSS\nExplains how representative samples are drawn for the GSS and introduces key sampling concepts used in the survey.\n\n\nTotal Survey Error in the GSS\nDiscusses sources of error in survey data, including nonresponse error, coverage error, sampling error, and measurement error.\n\n\nGSS Wording Experiments\nProvides examples of how question wording affects responses, highlighting GSS contributions to understanding measurement effects (e.g., national spending priority items).\n\n\nThe GSS Data Explorer\nTutorial on using the GSS Data Explorer, including online analytics, visualizations, and features introduced in Data Explorer 2.0.\n\n\nGSS for Educators\nTargeted to instructors; shares ideas for incorporating GSS data into lesson plans and classroom activities.\n\n\nGSS for STEM\nFocuses on working with data beyond survey responses, including paradata and linked datasets such as the death index.\n\n\nTaking a Deep Dive into GSS Content\nOverview of major variable groups and content areas, highlighting resources and recent trends relevant to researchers and educators.",
+    "text": "Key tweaks\n\n“This sections gives” → “This section gives”\nTighten repetition (“brief overview of common customization options”)\nClean up the book title formatting (remove double “The”)\nSlightly smoother phrasing\n\n\n\n\nRevised version (recommended)\nThis section gives several simple ways to customize visualizations in Python using Pandas and Matplotlib. It provides a brief overview of common customization options. For a helpful introduction with examples, see the Visualization with Matplotlib chapter in The Python Data Science Handbook by Jake VanderPlas:\n\nIntroduction to Matplotlib: Visualization with Matplotlib\n\nFor a full list of customization options and parameters, refer to the Matplotlib pyplot documentation:\n\nhttps://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.html",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Resources</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Customizing Visualizations</span>"
     ]
   },
   {
-    "objectID": "references.html",
-    "href": "references.html",
-    "title": "References",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "After the AP Data Science Capstone (AP Computer Science)",
     "section": "",
-    "text": "Hunter, John D. 2007. “Matplotlib: A 2D Graphics\nEnvironment.” Computing in Science & Engineering 9\n(3): 90–95. https://matplotlib.org/.\n\n\nKim, Albert Y., Chester Ismay, and Jennifer Chunn. 2018. “The\nFivethirtyeight r Package: ’Tame Data’ Principles for Introductory\nStatistics and Data Science Courses.” Technology Innovations\nin Statistics Education 11 (1). https://escholarship.org/uc/item/0rx1231m.\n\n\nMcKinney, Wes. 2010. “Data Structures for Statistical Computing in\nPython.” Proceedings of the 9th Python in Science\nConference, 56–61. https://doi.org/10.25080/Majora-92bf1922-00a.\n\n\nStokes, David J., and Mahmoud Harding. 2025. “A Project-Based\nApproach to Introductory R and Python for Data\nScience.” https://djstokes02.github.io/IntroRPython4DS/.\n\n\nWickham, Hadley. 2014. “Tidy Data.” Journal of\nStatistical Software 59. https://doi.org/10.18637/jss.v059.i10.",
+    "text": "Designed by vecteezy.com\n\n\nThis resource is intended for high school computer science student seeking to extend their learning beyond AP Computer Science courses. It provides a guide for the After the AP Capstone.\nThe materials for the capstone are designed for students who have completed AP Computer Science Principles or AP Computer Science A, or who have comparable experience with text-based programming.",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>References</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Preface</span>"
     ]
   },
   {
-    "objectID": "partners.html",
-    "href": "partners.html",
-    "title": "Partners",
+    "objectID": "data-question.html",
+    "href": "data-question.html",
+    "title": "Developing a Data Question and Exploring Your Variables",
     "section": "",
-    "text": "CourseKata\nThe After the AP Data Science Capstone uses Jupyter notebooks hosted on CKHub, developed by CourseKata. If this challenge sparked your interest, contact us CourseKata.org for more classroom-ready resources like these, including materials you can use throughout the year to supplement your regular curriculum.\nWe’re a nonprofit team of educators and learning scientists who build both full-year and supplementary statistics and data science curricula using the same kinds of Jupyter notebooks, real datasets, and modeling tools used in the challenge.\nOur technology and curriculum are designed to bring authentic data science practices into classrooms in ways that are teaching-friendly, meaningful, and equitable. Our research on lowering barriers to participation for students historically marginalized in STEM directly informs how we design our learning materials so more students can engage in mathematics that matters in the modern world.",
+    "text": "Overview\nIn this section, you will choose new variables from the dataset, develop a data question, prepare your data, summarize it, create a visualization, and describe what you notice.\nBy the end of this section, you should have:",
     "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Partners</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Developing a Data Question and Exploring Your Variables</span>"
     ]
   },
   {
-    "objectID": "partners.html#coursekata",
-    "href": "partners.html#coursekata",
-    "title": "Partners",
+    "objectID": "data-question.html#overview",
+    "href": "data-question.html#overview",
+    "title": "Developing a Data Question and Exploring Your Variables",
     "section": "",
-    "text": "CourseKata",
+    "text": "selected variables you want to explore\nwritten a clear data question\nprepared and summarized your data\ncreated a graph to answer your question\nwritten a short explanation of what you found",
     "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Partners</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Developing a Data Question and Exploring Your Variables</span>"
     ]
   },
   {
-    "objectID": "partners.html#university-of-minnesota-department-of-educational-psychology",
-    "href": "partners.html#university-of-minnesota-department-of-educational-psychology",
-    "title": "Partners",
-    "section": "University of Minnesota Department of Educational Psychology",
-    "text": "University of Minnesota Department of Educational Psychology\n\n\n\nLab Advancing Statistics Education Research (LASER)\n\n\nWe are working with CourseKata to evaluate the After the AP Data Science Capstone. From providing feedback on materials to surveying participants and instructors, our team will provide insights about this project to help CourseKata improve and refine this for future participants.\nOur team consists of professors and graduate students within the Educational Psychology department at the University of Minnesota. Our research focuses on the teaching and learning of statistics and data science. You can find many of our current and former projects at our research lab website: Lab Advancing Statistics Education Research (LASER).\n\n\n\nThe General Social Survey (GSS)",
+    "objectID": "data-question.html#part-1-choose-your-variables-and-develop-your-question",
+    "href": "data-question.html#part-1-choose-your-variables-and-develop-your-question",
+    "title": "Developing a Data Question and Exploring Your Variables",
+    "section": "Part 1: Choose Your Variables and Develop Your Question",
+    "text": "Part 1: Choose Your Variables and Develop Your Question\n\nStep 1: Look through the list of variables\nOpen the list of variables here: [Insert Link]\nFind two or three variables that were not used in the previous notebooks and that you are interested in exploring.\nChoose variables that seem interesting, meaningful, or likely to show differences across groups or over time.\nWrite the variables you are considering here:\n\nVariable 1:\n\nVariable 2:\n\nVariable 3:\n\n\n\nStep 2: Choose one variable to investigate\nNow choose one of the variables from Step 1 to investigate further.\nFor example, in Notebook 3, we explored the variable wwwhr, which represented the number of non-email hours respondents spent on the Internet. A good variable to investigate is one that you think might show interesting patterns or differences.\nBefore moving on, examine the column of data so that you understand:\n\nwhat the variable represents\nwhat values appear in the column\nwhether the values are numerical or categorical\nhow many rows contain usable data\n\nAnswer the following questions:\n\nWhat variable will you investigate?\n\nWhat type of data does this variable contain: categorical or numerical?\n\nWhat do the values in this column represent?\n\nDo you notice any missing values or unusual values?\n\n\n\nStep 3: Decide how you will split the data for comparison\nNext, decide how you want to compare your variable.\nThere are two common approaches:\n\nAcross groups: comparing a variable across categories\n\nAcross time: comparing a variable across years\n\nFor example:\n\nWhen we compared wwwhr across age groups, we were comparing values across groups.\nIn Notebook 4, when we created a line chart, we were comparing wwwhr across time using survey years.\n\nNow decide how you will split your data for comparison.\nAnswer the following question:\n\nHow will you split your variable for comparison?\n\nAcross groups\n\nAcross time\n\n\nIf you are comparing across groups, identify the grouping variable you will use.\nIf you are comparing across time, you will usually use the survey year variable.\nWrite your comparison variable here:\n\nComparison variable:\n\n\n\nStep 4: Write your data question\nNow write the question you want to answer with your comparison.\nYour question should involve your main variable and how it compares across groups or across time.\nHere are two examples:\n\nHow do happiness responses differ across education levels?\nHow has the average number of hours of leisure changed across survey years?\n\nWrite your question here:\n\nMy data question:",
     "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Partners</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Developing a Data Question and Exploring Your Variables</span>"
     ]
   },
   {
-    "objectID": "partners.html#the-general-social-survey",
-    "href": "partners.html#the-general-social-survey",
-    "title": "Partners",
-    "section": "The General Social Survey",
-    "text": "The General Social Survey\nThe After the AP Computer Science Data Science Capstone uses data from the General Social Survey (GSS), conducted by NORC at the University of Chicago. The GSS is a nationally representative survey that measures the attitudes and opinions of people in the United States since 1972.\nThe GSS team at NORC oversees the entire lifecycle of the survey: questionnaire design, data collection, data dissemination, and planning for the next GSS round. GSS data is available to download from the GSS Data Explorer and from the GSS website.",
+    "objectID": "data-question.html#part-2-use-the-data-to-answer-your-question",
+    "href": "data-question.html#part-2-use-the-data-to-answer-your-question",
+    "title": "Developing a Data Question and Exploring Your Variables",
+    "section": "Part 2: Use the Data to Answer Your Question",
+    "text": "Part 2: Use the Data to Answer Your Question\nNow that you have defined your question, the next step is to use the data to answer it.",
     "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Partners</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Developing a Data Question and Exploring Your Variables</span>"
+    ]
+  },
+  {
+    "objectID": "data-question.html#step-1-prepare-your-data",
+    "href": "data-question.html#step-1-prepare-your-data",
+    "title": "Developing a Data Question and Exploring Your Variables",
+    "section": "Step 1: Prepare your data",
+    "text": "Step 1: Prepare your data\nThe first step is to prepare the data you need for your analysis.\nThis might include:\n\ncreating a new table with only the columns you need\nremoving rows with missing values\nchecking that the variable types make sense\nrenaming variables if needed for clarity\n\nFor example:\n\nIn earlier notebooks, you created smaller tables using only the columns needed for the analysis.\nYou also used methods such as .dropna() to remove missing values before summarizing or graphing.\n\n\nWhat to do\nCreate a new table that includes only the columns you need for your question.\nFor most projects, this table will include:\n\nthe variable you want to investigate\nthe variable you are using to split the data for comparison\n\nThen clean the data so that only usable rows remain.\n\n\nTemplate code\nReplace the placeholder names with the variables for your project.\n# Create a table with only the columns needed for the analysis\nmy_data = gss[[\"main_variable\", \"comparison_variable\"]].copy()\n\n# Display the first five rows\nmy_data.head()\n# Remove rows with missing values in the columns you need\nmy_data = my_data.dropna(subset=[\"main_variable\", \"comparison_variable\"])\n\n# Check the number of remaining rows\nmy_data.shape\n# Display the first five rows of the cleaned table\nmy_data.head()\n\n\nYour work\nInsert your code blocks below.\nYour last code block in this section should print the first five rows of your prepared table.\n# Write your code here\n# Write your code here\n# Your final code block in this section should display the first five rows",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Developing a Data Question and Exploring Your Variables</span>"
+    ]
+  },
+  {
+    "objectID": "data-question.html#step-2-summarize-the-data-for-visualization",
+    "href": "data-question.html#step-2-summarize-the-data-for-visualization",
+    "title": "Developing a Data Question and Exploring Your Variables",
+    "section": "Step 2: Summarize the data for visualization",
+    "text": "Step 2: Summarize the data for visualization\nNext, summarize your data so it is ready to visualize.\nThe way you summarize depends on the type of variable you are investigating.\n\nIf your main variable is categorical\nUse counts or proportions by group or year.\nFor example, in Notebook 3, you counted the number of respondents in each category.\n\nExample\n# Count the number of responses in each category\nsummary_table = (\n    my_data.groupby(\"comparison_variable\")[\"main_variable\"]\n    .value_counts()\n    .reset_index(name=\"count\")\n)\n\nsummary_table.head()\n\n\n\nIf your main variable is numerical\nUse averages or medians by group or year.\nFor example, in Notebook 4, you calculated the average value of wwwhr for each year.\n\nExample\n# Calculate the mean of the numerical variable by group or year\nsummary_table = (\n    my_data.groupby(\"comparison_variable\")[\"main_variable\"]\n    .mean()\n    .round(2)\n    .reset_index(name=\"mean_value\")\n)\n\nsummary_table.head()\n\n\n\nWhat to do\nChoose the summary that matches your question:\n\nFor categorical variables, use counts or proportions\nFor numerical variables, use averages or medians\n\nThen create a summary table that you can use to build your graph.\n\n\nYour work\nInsert your code blocks below.\nYour last code block in this section should display your summarized data table.\n# Write your code here\n# Write your code here\n# Your final code block in this section should display your summarized data table",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Developing a Data Question and Exploring Your Variables</span>"
+    ]
+  },
+  {
+    "objectID": "data-question.html#step-3-create-a-visualization",
+    "href": "data-question.html#step-3-create-a-visualization",
+    "title": "Developing a Data Question and Exploring Your Variables",
+    "section": "Step 3: Create a visualization",
+    "text": "Step 3: Create a visualization\nNow create a graph that shows the comparison in your question.\nChoose a graph type that matches your data and summary.\n\nSuggested graph types\n\nGrouped bar chart for comparing categorical responses across groups\nBar chart for comparing numerical summaries across groups\nLine chart for showing how a numerical summary changes over time\n\n\n\nReminder\nMake sure your graph includes:\n\na clear title\nlabeled axes\nreadable category or year labels\n\n\n\nExample: Bar chart\nsummary_table.plot(\n    x=\"comparison_variable\",\n    y=\"mean_value\",\n    kind=\"bar\",\n    legend=False\n)\n\nplt.title(\"Insert Title Here\")\nplt.xlabel(\"Insert X-Axis Label Here\")\nplt.ylabel(\"Insert Y-Axis Label Here\")\nplt.show()\n\n\nExample: Line chart\nsummary_table.plot(\n    x=\"comparison_variable\",\n    y=\"mean_value\",\n    kind=\"line\",\n    marker=\"o\",\n    legend=False\n)\n\nplt.title(\"Insert Title Here\")\nplt.xlabel(\"Insert X-Axis Label Here\")\nplt.ylabel(\"Insert Y-Axis Label Here\")\nplt.show()\n\n\nYour work\nInsert your code below.\n# Write your code here",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Developing a Data Question and Exploring Your Variables</span>"
+    ]
+  },
+  {
+    "objectID": "data-question.html#step-4-describe-what-you-found",
+    "href": "data-question.html#step-4-describe-what-you-found",
+    "title": "Developing a Data Question and Exploring Your Variables",
+    "section": "Step 4: Describe what you found",
+    "text": "Step 4: Describe what you found\nWrite a short explanation describing the patterns, trends, or differences you see in your summary table and graph.\nBe specific. Refer to the categories, years, counts, proportions, averages, or medians shown in your results.\n\nQuestions to consider\nUse questions like these to help you write your explanation:\n\nWhat pattern do you notice in the graph?\nWhich group or year has the highest value?\nWhich group or year has the lowest value?\nAre there any large differences across groups?\nDo you notice an increase, decrease, or other trend over time?\nAre there any categories or years that stand out?\nDoes the graph answer your original question? If so, how?\n\n\n\nYour written response\nWrite your explanation here.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Developing a Data Question and Exploring Your Variables</span>"
+    ]
+  },
+  {
+    "objectID": "data-question.html#final-check",
+    "href": "data-question.html#final-check",
+    "title": "Developing a Data Question and Exploring Your Variables",
+    "section": "Final Check",
+    "text": "Final Check\nBefore moving on, make sure you have completed all of the following:\n\nselected new variables to explore\nchosen one main variable to investigate\nidentified how you will split the data for comparison\nwritten a clear data question\nprepared a clean data table\ncreated a summary table\nmade a graph with a title and labeled axes\nwritten a short explanation of your findings",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Developing a Data Question and Exploring Your Variables</span>"
     ]
   }
 ]

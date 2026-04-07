@@ -1,0 +1,340 @@
+---
+title: Customizing Visualizations
+---
+
+## Overview
+
+This section gives several simple ways to customize visualizations in Python using Pandas and Matplotlib. It provides a brief overview of common customization options. 
+
+For a helpful introduction with examples, see the _Visualization with Matplotlib_ chapter in _The Python Data Science Handbook_ by Jake VanderPlas: [Introduction to Matplotlib: Visualization with Matplotlib](https://jakevdp.github.io/PythonDataScienceHandbook/04.00-introduction-to-matplotlib.html)
+
+For a full list of customization options and parameters, refer to the Matplotlib `pyplot` documentation [https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.html](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.html)
+
+## Setup
+
+```{python}
+#| label: setup-plot-env
+import pandas as pd
+import matplotlib.pyplot as plt
+```
+
+```{python}
+#| include: false
+gss = pd.read_csv("data/updated_gss.csv")
+age_group_count = gss["age_group"].value_counts()
+deg_cat = ["Less than high school", "High school", "Bachelor's", "Graduate"]
+hap_cat = ["Very happy", "Pretty happy", "Not too happy"]
+deg_hap_mask = (gss["happy"].isin(hap_cat)) & (gss["degree"].isin(deg_cat))
+deg_hap_df = gss[deg_hap_mask].copy()
+age_group_happy_count = pd.crosstab(deg_hap_df["age_group"], deg_hap_df["happy"])
+grps_survey_year = gss.groupby("survey_year")
+mean_wwwhr = grps_survey_year["wwwhr"].mean().round(2).dropna()
+grps_age_groups = gss.groupby(["survey_year", "age_group"])
+mean_wwwhr_age_groups = grps_age_groups["wwwhr"].mean().dropna().round(2).unstack()
+```
+
+## Histograms
+
+### Basic Histogram
+
+In this section, we customize a histogram showing the distribution of weekly internet usage (in hours).
+
+```{python}
+#| label: basic-histogram
+gss["wwwhr"].plot(kind="hist")
+plt.xlabel("Time (Hours)")
+plt.ylabel("Frequency")
+plt.title("Distribution of Weekly Internet Usage")
+plt.show();
+```
+
+### Number of Bins
+
+You can control how the data is grouped using the `bins` parameter.
+
+- More bins show more detail  
+- Fewer bins show a smoother, less detailed distribution  
+
+```{python}
+#| label: hist-bins
+gss["wwwhr"].plot(kind="hist", bins=20)
+plt.xlabel("Time (Hours)")
+plt.ylabel("Frequency")
+plt.title("Distribution of Weekly Internet Usage")
+plt.show();
+```
+
+### Bar Color and Borders
+
+You can change the color of the bars and add borders to make them easier to distinguish.
+
+- `color` sets the fill color  
+- `edgecolor` sets the border color  
+
+```{python}
+#| label: hist-color
+gss["wwwhr"].plot(kind="hist", bins=20, color="teal", edgecolor="white")
+plt.xlabel("Time (Hours)")
+plt.ylabel("Frequency")
+plt.title("Distribution of Weekly Internet Usage")
+plt.show();
+```
+
+## Box Plots
+
+### Basic Box Plot
+
+In this section, we customize a box plot showing the distribution of weekly internet usage (in hours) across groups.
+
+```{python}
+#| label: basic-box-plot
+gss.boxplot("wwwhr")
+plt.xlabel("Time (Hours)")
+plt.title("Distribution of Weekly Internet Usage")
+plt.suptitle("")
+plt.show();
+```
+
+### Grid and Orientation
+
+You can remove the grid and change the orientation of a box plot to make it easier to read.
+
+- `grid=False` removes the gridlines
+
+- `vert=True` creates a vertical box plot  
+- `vert=False` creates a horizontal box plot  
+
+A horizontal box plot is often easier to read, especially when labels are long.
+
+```{python}
+#| label: boxplot-orientation
+gss.boxplot("wwwhr", vert=False, grid=False)
+plt.xlabel("Time (Hours)")
+plt.title("Distribution of Weekly Internet Usage")
+plt.suptitle("")
+plt.show();
+```
+
+### Grouping
+
+You can create multiple box plots to compare distributions across groups using the `by` parameter.
+
+```{python}
+gss.boxplot(column="wwwhr", by="age_group", vert=False, grid=False)
+plt.xlabel("Time (Hours)")
+plt.ylabel("")
+plt.title("Weekly Internet Usage by Age Group")
+plt.suptitle("")
+plt.show();
+```
+
+## Bar Charts
+
+In this section, we customize a bar chart showing the number of respondents in age group across all survey years.
+
+### Basic Bar Chart
+
+```{python}
+#| label: basic-bar-chart
+age_group_count.plot(kind="bar")
+plt.xlabel("")
+plt.ylabel("Count")
+plt.title("Distribution of Age Groups")
+plt.show();
+```
+
+### Bar Color and Borders
+
+You can change the color of the bars and add borders to make them easier to distinguish.
+
+- `color` sets the fill color of the bars  
+- `edgecolor` sets the border color  
+- `linewidth` controls the thickness of the border  
+
+Some common color choices include `"blue"`, `"red"`, `"green"`, `"purple"`, and `"teal"`.
+
+```{python}
+#| label: bar-color-borders
+age_group_count.plot(kind="bar", color="teal", edgecolor="black", linewidth=1)
+plt.xlabel("")
+plt.ylabel("Count")
+plt.title("Distribution of Age Groups")
+plt.show();
+```
+
+### Tick Labels
+
+You can customize tick labels to improve readability.
+
+- Rotate labels if they overlap  
+- Adjust their size if needed  
+
+```{python}
+#| label: bar-tick-labels
+age_group_count.plot(kind="bar", color="teal", edgecolor="black", linewidth=1)
+plt.xticks(rotation=0)
+plt.xlabel("")
+plt.ylabel("Count")
+plt.title("Distribution of Age Groups")
+plt.show();
+```
+
+### Legend
+
+A legend helps identify groups when there are multiple sets of bars.
+
+```{python}
+#| label: bar-legend
+age_group_happy_count.plot(kind="bar", edgecolor="white", linewidth=1)
+plt.xticks(rotation=0)
+plt.xlabel("")
+plt.ylabel("Count")
+plt.title("Distribution of Happiness Level by Age Group")
+
+# Add legend and customize legend title
+plt.legend(title="Happiness Categories")
+plt.show();
+```
+
+## Line Charts
+
+In this section, we customize a line chart showing the mean weekly internet usage (in hours) by survey year.
+
+## Basic Line Chart
+
+```{python}
+#| label: basic-line-chart
+mean_wwwhr.plot()
+plt.xlabel("")
+plt.ylabel("Time (Hours)")
+plt.title("Mean Weekly Internet Usage by Survey Year")
+plt.show();
+```
+
+### Markers and Lines
+
+You can add a marker and change the color of the line to make the graph more visually distinctive. 
+
+Markers show the individual data points on a line. They help you see exactly where each value occurs, rather than just the overall trend.
+
+Common marker styles include:
+
+- `"o"` for circles
+- `"s"` for squares
+- `"^"` for triangles
+- `"x"` for x-shaped markers
+- `"*"` for stars
+
+You can also adjust the marker size using the markersize parameter:
+
+- Larger values make markers easier to see
+- Smaller values reduce clutter when there are many points
+
+For example:
+
+- `markersize=4` (smaller markers)
+- `markersize=8` (larger markers)
+
+Some common color choices include `"blue"`, `"red"`, `"green"`, `"purple"`, and `"teal"`.
+
+You can also adjust the line width using the linewidth parameter:
+
+- Thicker lines make trends easier to see
+- Thinner lines can make the plot look less crowded
+
+For example:
+
+- `linewidth=1` (thin line)
+- `linewidth=3` (thicker line)
+
+```{python}
+#| label: line-marker-line-color
+mean_wwwhr.plot(marker="o", markersize=4, linewidth=1, color="teal")
+plt.xlabel("")
+plt.ylabel("Time (Hours)")
+plt.title("Mean Weekly Internet Usage by Survey Year")
+plt.show();
+```
+
+### Line Style
+
+You can change how the line connecting the points looks.
+
+```{python}
+#| label: line-line-style
+mean_wwwhr.plot(marker="o", color="teal", linestyle=":")
+plt.xlabel("")
+plt.ylabel("Time (Hours)")
+plt.title("Mean Weekly Internet Usage by Survey Year")
+plt.show();
+```
+
+Some line style options include:
+
+- `"-"` for solid
+- `"--"` for dashed
+- `":"` for dotted
+- `"-."` for dash-dot
+
+### Tick Labels
+
+You can customize tick labels by specifying which values appear on the axis, rotating them, or adjusting their size to improve readability.
+
+```{python}
+#| label: line-tick-labels
+# Create evenly spaced tick marks every two years
+# using range(start, stop, step)
+wwwhr_years = range(2000, 2024, 2)
+
+mean_wwwhr.plot(marker="o", color="teal", linestyle=":")
+plt.xticks(wwwhr_years, rotation=45)
+plt.xlabel("")
+plt.ylabel("Time (Hours)")
+plt.title("Mean Weekly Internet Usage by Survey Year")
+plt.show();
+```
+
+### Gridlines
+
+Gridlines can make it easier to estimate values from the graph.
+
+```{python}
+#| labels: line-gridlines
+# Create evenly spaced tick marks every two years
+wwwhr_years = range(2000, 2024, 2)
+
+mean_wwwhr.plot(marker="o", color="teal", linestyle=":")
+plt.xticks(wwwhr_years, rotation=45)
+plt.xlabel("")
+plt.ylabel("Time (Hours)")
+plt.title("Mean Weekly Internet Usage by Survey Year")
+
+# Add horizontal gridlines aligned with tick marks
+plt.grid(axis="y", linestyle=":", alpha=0.8)
+plt.show();
+```
+
+### Legend
+
+A legend helps identify each line, especially when working with graphs that have more than one line.
+
+In this section, we customize a line chart showing the mean weekly internet usage (in hours) by age group and survey year.
+
+```{python}
+# Create evenly spaced tick marks every two years
+wwwhr_years = range(2000, 2024, 2)
+
+mean_wwwhr_age_groups.plot(marker="o")
+plt.xticks(wwwhr_years, rotation=45)
+plt.xlabel("")
+plt.ylabel("Time (Hours)")
+plt.title("Mean Weekly Internet Usage by Survey Year")
+
+# Add horizontal gridlines aligned with tick marks
+plt.grid(axis="y", linestyle=":", alpha=0.6)
+
+# Add a legend
+plt.legend()
+plt.show();
+```
+
