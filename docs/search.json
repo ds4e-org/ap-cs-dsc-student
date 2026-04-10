@@ -178,5 +178,35 @@
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Customizing Visualizations</span>"
     ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "Introduction",
+    "section": "",
+    "text": "Purpose\nThis resource is a teacher guide for a data investigation project designed to extend student learning beyond AP Computer Science courses. The guide supports high school computer science teachers in planning and facilitating a data science project that builds on students’ prior programming experience and does not assume prior coursework in statistics or data science.\nIt explains the structure of the project, the dataset used, and the types of analyses students are expected to pursue. The project is intended for students who have completed AP Computer Science Principles or AP Computer Science A, or who have comparable experience with text-based programming.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#purpose",
+    "href": "intro.html#purpose",
+    "title": "Introduction",
+    "section": "",
+    "text": "Data Science Tools Used\n\n\n\nThis project uses Python with the pandas library for data manipulation (McKinney 2010) and the matplotlib library for data visualization (Hunter 2007).",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#dataset",
+    "href": "intro.html#dataset",
+    "title": "Introduction",
+    "section": "Dataset",
+    "text": "Dataset\nThe project uses data from the General Social Survey (GSS). The GSS is primarily funded by the National Science Foundation (NSF) and conducted by the National Opinion Research Center (NORC), a non-partisan research organization. The GSS collects data on a variety of topics in contemporary American society to monitor and explain trends in opinions, attitudes, and behaviors.\nThe GSS contains a standard core of demographic, behavioral, and attitudinal questions, plus topics of special interest. Among the topics covered are education, civil liberties, national spending priorities, psychological well-being, and social mobility. It allows researchers to examine the structure and functioning of society in general, as well as the role played by relevant subgroups.\n\n\n\n\nHunter, John D. 2007. “Matplotlib: A 2D Graphics Environment.” Computing in Science & Engineering 9 (3): 90–95. https://matplotlib.org/.\n\n\nMcKinney, Wes. 2010. “Data Structures for Statistical Computing in Python.” Proceedings of the 9th Python in Science Conference, 56–61. https://doi.org/10.25080/Majora-92bf1922-00a.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction</span>"
+    ]
   }
 ]
