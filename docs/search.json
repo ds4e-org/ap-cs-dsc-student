@@ -233,8 +233,8 @@
     "objectID": "dataset.html#what-was-changed",
     "href": "dataset.html#what-was-changed",
     "title": "Dataset",
-    "section": "What Was Changed?",
-    "text": "What Was Changed?\n\nA smaller set of relevant variables was selected\n\nSome variables were renamed for clarity\n\nA new variable, age_group, was created\n\nThe variable wwwhr was converted to numeric values\n\nThe dataset was limited to respondents age 51 and under\n\nSome missing or unclear responses were cleaned\n\nThis means you are working with a prepared dataset, not the raw original data.",
+    "section": "What Was Changed",
+    "text": "What Was Changed\n\nA smaller set of relevant variables was selected\n\nSome variables were renamed for clarity\n\nA new variable, age_group, was created\n\nThe variable wwwhr was converted to numeric values\n\nThe dataset was limited to respondents age 51 and under\n\nSome missing or unclear responses were cleaned\n\nThis means you are working with a prepared dataset, not the raw original data.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Dataset</span>"
     ]
@@ -244,7 +244,7 @@
     "href": "dataset.html#how-the-data-is-organized",
     "title": "Dataset",
     "section": "How the Data Is Organized",
-    "text": "How the Data Is Organized\n\nEach row represents one person\n\nEach column represents one variable\n\nEach cell contains a single value\n\nThe data has been simplified so you can focus on:\n\nAsking questions\n\nExploring patterns\n\nInterpreting results\n\nwhile still working with real-world data.",
+    "text": "How the Data Is Organized\n\nEach row represents one person\n\nEach column represents one variable\n\nEach cell contains a single value",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Dataset</span>"
     ]

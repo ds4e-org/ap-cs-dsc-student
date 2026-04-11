@@ -12,7 +12,7 @@ The survey includes a standard core of demographic, behavioral, and attitudinal 
 
 You will work with a prepared subset of the full GSS dataset specifically designed for this project.
 
-## What Was Changed?
+## What Was Changed
 
 -   A smaller set of relevant variables was selected\
 -   Some variables were renamed for clarity\
@@ -28,11 +28,3 @@ This means you are working with a prepared dataset, not the raw original data.
 -   Each row represents one person\
 -   Each column represents one variable\
 -   Each cell contains a single value
-
-The data has been simplified so you can focus on:
-
--   Asking questions\
--   Exploring patterns\
--   Interpreting results
-
-while still working with real-world data.
