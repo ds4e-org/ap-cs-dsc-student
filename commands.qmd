@@ -470,42 +470,6 @@ gss["age"]
 By default, Pandas shows only the first 5 and last 5 values of a selected column.
 :::
 
-#### `.loc[ ]`
-
-Select rows and columns using labels.
-
-**Syntax**
-
-``` python
-dataframe.loc[row_condition, "column_name"]
-```
-
-**Example**
-
-```{python}
-#| label: loc-example
-
-gss.loc[gss["age"] > 40, "degree"]
-```
-
-#### `.iloc[ ]`
-
-Select rows and columns using index positions.
-
-**Syntax**
-
-``` python
-dataframe.iloc[row_index, column_index]
-```
-
-**Example**
-
-```{python}
-#| label: iloc-example
-
-gss.iloc[0:5, 0:3]
-```
-
 #### Comparison Operators
 
 Rows in a `DataFrame` can be filtered using comparison conditions.
@@ -635,9 +599,9 @@ dataframe["column_name"].value_counts()
 gss["degree"].value_counts()
 ```
 
-##### `pd.crosstab()`
+#### `.crosstab()`
 
-`pd.crosstab()` displays frequency counts for combinations of two categorical variables.
+`.crosstab()` displays frequency counts for combinations of two categorical variables.
 
 **Syntax**
 
@@ -866,45 +830,6 @@ plt.show();
 
 ::: {.callout-note title="Why grouping first matters"}
 Line charts require summarized data. `.groupby()` should be used before plotting to calculate summary values over time.
-:::
-
-##### Gridlines
-
-| Function     | Purpose                   |
-|--------------|---------------------------|
-| `plt.grid()` | Adds or removes gridlines |
-
-::: {.callout-note title="Improving readability"}
-`plt.grid(axis= y", linestyle="--", alpha=0.6)` adds light horizontal gridlines.
-:::
-
-**Example**
-
-```{python}
-#| label: line-plot-xticks-example
-wwwhr_years = range(2000, 2024, 2)
-
-grps_survey_year["wwwhr"].mean().round(2).dropna().plot(marker="o")
-plt.xticks(wwwhr_years)
-plt.xlabel("")
-plt.ylabel("Time (Hours)")
-plt.grid(axis="y", linestyle="--", alpha=0.6)
-plt.title("Mean Internet Usage per Week by Survey Year")
-plt.show();
-```
-
-::: {.callout-note title="Markers"}
-`marker="o"` adds a circle at each data point on the line.
-:::
-
-##### $x-$ticks
-
-| Function       | Purpose                                                |
-|----------------|--------------------------------------------------------|
-| `plt.xticks()` | Controls the tick labels and positions on the $x-$axis |
-
-::: {.callout-note title="Using `range()`"}
-`range(2000, 2024, 2)` generates values from 2000 up to (but not including) 2024, stepping by 2.
 :::
 
 #### `.unstack()`

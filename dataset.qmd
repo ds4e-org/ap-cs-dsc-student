@@ -4,39 +4,35 @@ title: Dataset
 
 ## About the Dataset
 
-This project uses data from the [General Social Survey (GSS)](https://gss.norc.org/), a long-running survey that collects information about people in the United States. It includes topics like education, opinions, behaviors, and social trends.
+This project uses data from the [General Social Survey (GSS)](https://gss.norc.org/), a long-running survey that has been conducted since 1972 to collect information about people in the United States. The GSS gathers data on a wide range of topics in contemporary American society, including education, opinions, behaviors, and social trends.
 
-The GSS has been conducted since 1972 and is used by researchers to study how society changes over time.
+The survey includes a standard core of demographic, behavioral, and attitudinal questions. It also covers additional topics of special interest such as civil liberties, national spending priorities, psychological well-being, and social mobility. These data allow researchers to examine patterns and better understand how society changes over time.
 
 ## The Project Dataset
 
-The dataset you are using is a subset of the full GSS. It has been selected and prepared to make it easier to explore in this project.
+You will work with a prepared subset of the full GSS dataset specifically designed for this project.
 
 ## What Was Changed?
 
-Before you received the dataset, a few adjustments were made:
-
-- A smaller set of relevant variables was selected  
-- Some variables were renamed for clarity  
-- A new variable, `age_group`, was created  
-- The variable `wwwhr` was converted to numeric values  
-- The dataset was limited to respondents age 51 and under  
-- Some missing or unclear responses were cleaned or left as-is  
+-   A smaller set of relevant variables was selected\
+-   Some variables were renamed for clarity\
+-   A new variable, `age_group`, was created\
+-   The variable `wwwhr` was converted to numeric values\
+-   The dataset was limited to respondents age 51 and under\
+-   Some missing or unclear responses were cleaned
 
 This means you are working with a prepared dataset, not the raw original data.
 
 ## How the Data Is Organized
 
-The dataset is structured to make analysis easier:
-
-- Each row represents one person  
-- Each column represents one variable  
-- Each cell contains a single value  
+-   Each row represents one person\
+-   Each column represents one variable\
+-   Each cell contains a single value
 
 The data has been simplified so you can focus on:
 
-- Asking questions  
-- Exploring patterns  
-- Interpreting results  
+-   Asking questions\
+-   Exploring patterns\
+-   Interpreting results
 
 while still working with real-world data.

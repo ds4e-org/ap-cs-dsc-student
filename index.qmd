@@ -2,8 +2,6 @@
 title: Preface
 ---
 
-![Designed by vecteezy.com](images/cover.jpg){ width=400px fig-align="center" }
+![Designed by vecteezy.com](images/cover.jpg){width="400px" fig-align="center"}
 
-This resource is intended for high school computer science student seeking to extend their learning beyond AP Computer Science courses. It provides a guide for the After the AP Capstone.
-
-The materials for the capstone are designed for students who have completed AP Computer Science Principles or AP Computer Science A, or who have comparable experience with text-based programming.
+This resource is intended for high school computer science students seeking to extend their learning beyond AP Computer Science courses. It provides guidance, hints, and key information to help you complete the After the AP Data Science Capstone.

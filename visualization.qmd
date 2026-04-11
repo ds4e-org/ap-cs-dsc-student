@@ -4,11 +4,11 @@ title: Customizing Visualizations
 
 ## Overview
 
-This section gives several simple ways to customize visualizations in Python using Pandas and Matplotlib. It provides a brief overview of common customization options. 
+This section gives several simple ways to customize visualizations in Python using Pandas and Matplotlib. It provides a brief overview of common customization options.
 
-For a helpful introduction with examples, see the _Visualization with Matplotlib_ chapter in _The Python Data Science Handbook_ by Jake VanderPlas: [Introduction to Matplotlib: Visualization with Matplotlib](https://jakevdp.github.io/PythonDataScienceHandbook/04.00-introduction-to-matplotlib.html)
-
-For a full list of customization options and parameters, refer to the Matplotlib `pyplot` documentation [https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.html](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.html)
+::: {.callout-tip title="Learn More: Matplotlib"}
+For a more in-depth introduction with examples, including additional plot types, see the *Visualization with Matplotlib* chapter in *The Python Data Science Handbook* [@vanderplas_matplotlib].
+:::
 
 ## Setup
 
@@ -52,8 +52,8 @@ plt.show();
 
 You can control how the data is grouped using the `bins` parameter.
 
-- More bins show more detail  
-- Fewer bins show a smoother, less detailed distribution  
+-   More bins show more detail\
+-   Fewer bins show a smoother, less detailed distribution
 
 ```{python}
 #| label: hist-bins
@@ -68,8 +68,8 @@ plt.show();
 
 You can change the color of the bars and add borders to make them easier to distinguish.
 
-- `color` sets the fill color  
-- `edgecolor` sets the border color  
+-   `color` sets the fill color\
+-   `edgecolor` sets the border color
 
 ```{python}
 #| label: hist-color
@@ -99,10 +99,11 @@ plt.show();
 
 You can remove the grid and change the orientation of a box plot to make it easier to read.
 
-- `grid=False` removes the gridlines
+-   `grid=False` removes the gridlines
 
-- `vert=True` creates a vertical box plot  
-- `vert=False` creates a horizontal box plot  
+-   `vert=True` creates a vertical box plot\
+
+-   `vert=False` creates a horizontal box plot
 
 A horizontal box plot is often easier to read, especially when labels are long.
 
@@ -147,9 +148,9 @@ plt.show();
 
 You can change the color of the bars and add borders to make them easier to distinguish.
 
-- `color` sets the fill color of the bars  
-- `edgecolor` sets the border color  
-- `linewidth` controls the thickness of the border  
+-   `color` sets the fill color of the bars\
+-   `edgecolor` sets the border color\
+-   `linewidth` controls the thickness of the border
 
 Some common color choices include `"blue"`, `"red"`, `"green"`, `"purple"`, and `"teal"`.
 
@@ -166,8 +167,8 @@ plt.show();
 
 You can customize tick labels to improve readability.
 
-- Rotate labels if they overlap  
-- Adjust their size if needed  
+-   Rotate labels if they overlap\
+-   Adjust their size if needed
 
 ```{python}
 #| label: bar-tick-labels
@@ -213,39 +214,39 @@ plt.show();
 
 ### Markers and Lines
 
-You can add a marker and change the color of the line to make the graph more visually distinctive. 
+You can add a marker and change the color of the line to make the graph more visually distinctive.
 
 Markers show the individual data points on a line. They help you see exactly where each value occurs, rather than just the overall trend.
 
 Common marker styles include:
 
-- `"o"` for circles
-- `"s"` for squares
-- `"^"` for triangles
-- `"x"` for x-shaped markers
-- `"*"` for stars
+-   `"o"` for circles
+-   `"s"` for squares
+-   `"^"` for triangles
+-   `"x"` for x-shaped markers
+-   `"*"` for stars
 
 You can also adjust the marker size using the markersize parameter:
 
-- Larger values make markers easier to see
-- Smaller values reduce clutter when there are many points
+-   Larger values make markers easier to see
+-   Smaller values reduce clutter when there are many points
 
 For example:
 
-- `markersize=4` (smaller markers)
-- `markersize=8` (larger markers)
+-   `markersize=4` (smaller markers)
+-   `markersize=8` (larger markers)
 
 Some common color choices include `"blue"`, `"red"`, `"green"`, `"purple"`, and `"teal"`.
 
 You can also adjust the line width using the linewidth parameter:
 
-- Thicker lines make trends easier to see
-- Thinner lines can make the plot look less crowded
+-   Thicker lines make trends easier to see
+-   Thinner lines can make the plot look less crowded
 
 For example:
 
-- `linewidth=1` (thin line)
-- `linewidth=3` (thicker line)
+-   `linewidth=1` (thin line)
+-   `linewidth=3` (thicker line)
 
 ```{python}
 #| label: line-marker-line-color
@@ -271,10 +272,10 @@ plt.show();
 
 Some line style options include:
 
-- `"-"` for solid
-- `"--"` for dashed
-- `":"` for dotted
-- `"-."` for dash-dot
+-   `"-"` for solid
+-   `"--"` for dashed
+-   `":"` for dotted
+-   `"-."` for dash-dot
 
 ### Tick Labels
 
@@ -337,4 +338,3 @@ plt.grid(axis="y", linestyle=":", alpha=0.6)
 plt.legend()
 plt.show();
 ```
-
