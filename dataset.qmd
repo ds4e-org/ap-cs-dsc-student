@@ -14,12 +14,13 @@ You will work with a prepared subset of the full GSS dataset specifically design
 
 ## What Was Changed
 
--   A smaller set of relevant variables was selected\
--   Some variables were renamed for clarity\
--   A new variable, `age_group`, was created\
--   The variable `wwwhr` was converted to numeric values\
--   The dataset was limited to respondents age 51 and under\
--   Some missing or unclear responses were cleaned
+- A smaller set of relevant variables was selected\
+- Some variables were renamed for clarity\
+- A new variable, `age_group`, was created\
+- The variable `wwwhr` was converted to numeric values\
+- Variables originally labeled `cohort` and `year` were renamed to `birth_year` and `survey_year`\
+- The dataset was limited to respondents age 51 and under\
+- Some missing or unclear responses were cleaned
 
 This means you are working with a prepared dataset, not the raw original data.
 
