@@ -234,7 +234,7 @@
     "href": "dataset.html#what-was-changed",
     "title": "Dataset",
     "section": "What Was Changed",
-    "text": "What Was Changed\n\nA smaller set of relevant variables was selected\n\nSome variables were renamed for clarity\n\nA new variable, age_group, was created\n\nThe variable wwwhr was converted to numeric values\n\nThe dataset was limited to respondents age 51 and under\n\nSome missing or unclear responses were cleaned\n\nThis means you are working with a prepared dataset, not the raw original data.",
+    "text": "What Was Changed\n\nA smaller set of relevant variables was selected\n\nSome variables were renamed for clarity\n\nA new variable, age_group, was created\n\nThe variable wwwhr was converted to numeric values\n\nVariables originally labeled cohort and year were renamed to birth_year and survey_year\n\nThe dataset was limited to respondents age 51 and under\n\nSome missing or unclear responses were cleaned\n\nThis means you are working with a prepared dataset, not the raw original data.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Dataset</span>"
     ]
