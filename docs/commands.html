@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-04-12">
+<meta name="dcterms.date" content="2026-04-13">
 
 <title>Useful Python Commands – After the AP Data Science Capstone (AP Computer Science)</title>
 <style>
@@ -324,7 +324,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">April 12, 2026</p>
+      <p class="date">April 13, 2026</p>
     </div>
   </div>
   
@@ -347,7 +347,7 @@ window.Quarto = {
 <div id="cell-assignment-operator" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">10</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="assignment-operator" class="cell-output cell-output-display" data-execution_count="40">
+<div id="assignment-operator" class="cell-output cell-output-display" data-execution_count="2">
 <pre><code>10</code></pre>
 </div>
 </div>
@@ -412,7 +412,7 @@ Slice reminder
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li><code>[:3]</code> and <code>[:3]</code> both mean items at index positions 0–2</li>
+<li><code>[0:3]</code> and <code>[:3]</code> both mean items at index positions 0–2</li>
 <li><code>[-3:]</code> means the last three items</li>
 </ul>
 </div>
@@ -520,7 +520,7 @@ Lists vs Dictionaries
 <span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">"10th grade"</span>]</span>
 <span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a> </span>
 <span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a><span class="bu">set</span>(grade)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="set-example" class="cell-output cell-output-display" data-execution_count="48">
+<div id="set-example" class="cell-output cell-output-display" data-execution_count="10">
 <pre><code>{'10th grade', '11th grade', '12th grade', '9th grade'}</code></pre>
 </div>
 </div>
@@ -588,7 +588,7 @@ E</code></pre>
 <span id="cb30-11"><a href="#cb30-11" aria-hidden="true" tabindex="-1"></a>        education.append(newline)</span>
 <span id="cb30-12"><a href="#cb30-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-13"><a href="#cb30-13" aria-hidden="true" tabindex="-1"></a>education[:<span class="dv">10</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="read-text-file" class="cell-output cell-output-display" data-execution_count="50">
+<div id="read-text-file" class="cell-output cell-output-display" data-execution_count="12">
 <pre><code>['11th grade',
  '4 years of college',
  '4 years of college',
@@ -702,7 +702,7 @@ Why <code>.strip()</code> matters
 <p><strong>Example</strong></p>
 <div id="cell-head-example" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>gss.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="head-example" class="cell-output cell-output-display" data-execution_count="55">
+<div id="head-example" class="cell-output cell-output-display" data-execution_count="17">
 <div>
 
 
@@ -934,7 +934,7 @@ memory usage: 7.5+ MB</code></pre>
 <p><strong>Example (Ascending Order)</strong></p>
 <div id="cell-sort-ascending" class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>gss.sort_values(by<span class="op">=</span><span class="st">"age"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="sort-ascending" class="cell-output cell-output-display" data-execution_count="57">
+<div id="sort-ascending" class="cell-output cell-output-display" data-execution_count="19">
 <div>
 
 
@@ -1240,7 +1240,7 @@ memory usage: 7.5+ MB</code></pre>
 <p><strong>Example (Descending Order)</strong></p>
 <div id="cell-sort-descending" class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb49"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>gss.sort_values(by<span class="op">=</span><span class="st">"age"</span>, ascending<span class="op">=</span><span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="sort-descending" class="cell-output cell-output-display" data-execution_count="58">
+<div id="sort-descending" class="cell-output cell-output-display" data-execution_count="20">
 <div>
 
 
@@ -1569,7 +1569,7 @@ Display Behavior
 <p><strong>Example</strong></p>
 <div id="cell-select-column-example" class="cell" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb51"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>gss[<span class="st">"age"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="select-column-example" class="cell-output cell-output-display" data-execution_count="59">
+<div id="select-column-example" class="cell-output cell-output-display" data-execution_count="21">
 <pre><code>0        32
 1        37
 2        30
@@ -1640,7 +1640,7 @@ Display Behavior
 <p><strong>Example</strong></p>
 <div id="cell-filtering-example" class="cell" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb54"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>gss[gss[<span class="st">"age"</span>] <span class="op">&gt;</span> <span class="dv">40</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="filtering-example" class="cell-output cell-output-display" data-execution_count="60">
+<div id="filtering-example" class="cell-output cell-output-display" data-execution_count="22">
 <div>
 
 
@@ -1971,7 +1971,7 @@ Display Behavior
 <p><strong>Example</strong></p>
 <div id="cell-logical-operators-example" class="cell" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb56"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>gss[(gss[<span class="st">"tvhours"</span>] <span class="op">&gt;</span> <span class="dv">15</span>) <span class="op">&amp;</span> (gss[<span class="st">"happy"</span>] <span class="op">==</span> <span class="st">"Very happy"</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="logical-operators-example" class="cell-output cell-output-display" data-execution_count="61">
+<div id="logical-operators-example" class="cell-output cell-output-display" data-execution_count="23">
 <div>
 
 
@@ -2374,7 +2374,7 @@ Display Behavior
 <div id="cell-logical-mask-example" class="cell" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb57"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a>mask <span class="op">=</span> (gss[<span class="st">"tvhours"</span>] <span class="op">&gt;</span> <span class="dv">15</span>) <span class="op">&amp;</span> (gss[<span class="st">"happy"</span>] <span class="op">==</span> <span class="st">"Very happy"</span>)</span>
 <span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>gss[mask]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="logical-mask-example" class="cell-output cell-output-display" data-execution_count="62">
+<div id="logical-mask-example" class="cell-output cell-output-display" data-execution_count="24">
 <div>
 
 
@@ -2800,7 +2800,7 @@ What is <code>mask</code>?
 <span id="cb59-3"><a href="#cb59-3" aria-hidden="true" tabindex="-1"></a>mask <span class="op">=</span> gss[<span class="st">"happy"</span>].isin(hap_cat)</span>
 <span id="cb59-4"><a href="#cb59-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb59-5"><a href="#cb59-5" aria-hidden="true" tabindex="-1"></a>gss[mask]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="isin-example" class="cell-output cell-output-display" data-execution_count="63">
+<div id="isin-example" class="cell-output cell-output-display" data-execution_count="25">
 <div>
 
 
@@ -3115,7 +3115,7 @@ What is <code>mask</code>?
 <p><strong>Example</strong></p>
 <div id="cell-describe-example" class="cell" data-execution_count="26">
 <div class="sourceCode cell-code" id="cb61"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a>gss.describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="describe-example" class="cell-output cell-output-display" data-execution_count="64">
+<div id="describe-example" class="cell-output cell-output-display" data-execution_count="26">
 <div>
 
 
@@ -3259,7 +3259,7 @@ Default Behavior
 <p><strong>Example</strong></p>
 <div id="cell-value-counts-example" class="cell" data-execution_count="27">
 <div class="sourceCode cell-code" id="cb63"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a>gss[<span class="st">"degree"</span>].value_counts()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="value-counts-example" class="cell-output cell-output-display" data-execution_count="65">
+<div id="value-counts-example" class="cell-output cell-output-display" data-execution_count="27">
 <pre><code>High school                       10893
 Bachelor's                         4324
 Less than high school              2498
@@ -3287,7 +3287,7 @@ Name: degree, dtype: int64</code></pre>
 <span id="cb66-6"><a href="#cb66-6" aria-hidden="true" tabindex="-1"></a>deg_hap_df <span class="op">=</span> gss[deg_hap_mask]</span>
 <span id="cb66-7"><a href="#cb66-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb66-8"><a href="#cb66-8" aria-hidden="true" tabindex="-1"></a>pd.crosstab(deg_hap_df[<span class="st">"degree"</span>], deg_hap_df[<span class="st">"happy"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="crosstab-counts-example" class="cell-output cell-output-display" data-execution_count="66">
+<div id="crosstab-counts-example" class="cell-output cell-output-display" data-execution_count="28">
 <div>
 
 
@@ -3349,7 +3349,7 @@ Name: degree, dtype: int64</code></pre>
 <p><strong>Example</strong></p>
 <div id="cell-groupby-example" class="cell" data-execution_count="29">
 <div class="sourceCode cell-code" id="cb68"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a>gss.groupby(<span class="st">"degree"</span>)[<span class="st">"age"</span>].mean()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="groupby-example" class="cell-output cell-output-display" data-execution_count="67">
+<div id="groupby-example" class="cell-output cell-output-display" data-execution_count="29">
 <pre><code>degree
 .d:  Do not Know/Cannot Choose    35.428571
 .n:  No answer                    33.277778
@@ -3636,7 +3636,7 @@ Why grouping first matters
 <div id="cell-unstack-example" class="cell" data-execution_count="37">
 <div class="sourceCode cell-code" id="cb83"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb83-1"><a href="#cb83-1" aria-hidden="true" tabindex="-1"></a>grps_age_groups <span class="op">=</span> gss.groupby([<span class="st">"survey_year"</span>, <span class="st">"age_group"</span>])</span>
 <span id="cb83-2"><a href="#cb83-2" aria-hidden="true" tabindex="-1"></a>grps_age_groups[<span class="st">"yearsjob"</span>].mean().dropna().<span class="bu">round</span>(<span class="dv">2</span>).unstack()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="unstack-example" class="cell-output cell-output-display" data-execution_count="75">
+<div id="unstack-example" class="cell-output cell-output-display" data-execution_count="37">
 <div>
 
 
